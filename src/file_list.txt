@@ -1,0 +1,9 @@
+../src/vga_top.v 
+../src/tb_vga_top.v
+../src/fsm.v 
+../src/ray_feeder.v 
+../src/ray_calc.v
+../src/world.v
+../src/vga_sync.v
+../src/spi_master.v
+../src/height_calculator.v

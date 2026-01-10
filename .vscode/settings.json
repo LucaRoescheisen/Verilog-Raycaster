@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "Vivado": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": [
+        "/k",
+        "call D:\\XilinxSoftware\\2025.1\\Vivado\\settings64.bat"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Vivado"
+}

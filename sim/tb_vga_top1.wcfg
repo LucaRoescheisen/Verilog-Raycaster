@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_vga_top.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_vga_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,583.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3,159,438.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="275"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/tb_vga_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/rgb_r" type="array">
+      <obj_property name="ElementShortName">rgb_r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rgb_r[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/h_pos" type="array">
+      <obj_property name="ElementShortName">h_pos[9:0]</obj_property>
+      <obj_property name="ObjectShortName">h_pos[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/v_pos" type="array">
+      <obj_property name="ElementShortName">v_pos[9:0]</obj_property>
+      <obj_property name="ObjectShortName">v_pos[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/ray_index" type="array">
+      <obj_property name="ElementShortName">ray_index[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ray_index[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/mem_height_buffer_1" type="array">
+      <obj_property name="ElementShortName">mem_height_buffer_1[639:0][8:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_height_buffer_1[639:0][8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/mem_height_buffer_2" type="array">
+      <obj_property name="ElementShortName">mem_height_buffer_2[639:0][8:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_height_buffer_2[639:0][8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/half_height" type="array">
+      <obj_property name="ElementShortName">half_height[8:0]</obj_property>
+      <obj_property name="ObjectShortName">half_height[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/data_initialised" type="logic">
+      <obj_property name="ElementShortName">data_initialised</obj_property>
+      <obj_property name="ObjectShortName">data_initialised</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/ray_index" type="array">
+      <obj_property name="ElementShortName">ray_index[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ray_index[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/wall_height" type="array">
+      <obj_property name="ElementShortName">wall_height[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wall_height[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/first_initialisation" type="logic">
+      <obj_property name="ElementShortName">first_initialisation</obj_property>
+      <obj_property name="ObjectShortName">first_initialisation</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/ray_done" type="logic">
+      <obj_property name="ElementShortName">ray_done</obj_property>
+      <obj_property name="ObjectShortName">ray_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/height_found" type="logic">
+      <obj_property name="ElementShortName">height_found</obj_property>
+      <obj_property name="ObjectShortName">height_found</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/write_new_frame" type="logic">
+      <obj_property name="ElementShortName">write_new_frame</obj_property>
+      <obj_property name="ObjectShortName">write_new_frame</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/switch" type="logic">
+      <obj_property name="ElementShortName">switch</obj_property>
+      <obj_property name="ObjectShortName">switch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/column_height" type="array">
+      <obj_property name="ElementShortName">column_height[8:0]</obj_property>
+      <obj_property name="ObjectShortName">column_height[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/video_on" type="logic">
+      <obj_property name="ElementShortName">video_on</obj_property>
+      <obj_property name="ObjectShortName">video_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/wall_top" type="array">
+      <obj_property name="ElementShortName">wall_top[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wall_top[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_vga_top/uut/wall_bottom" type="array">
+      <obj_property name="ElementShortName">wall_bottom[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wall_bottom[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,18 @@
+cmd /k "D:\XilinxSoftware\2025.1\Vivado\settings64.bat"
+
+if (!(Test-Path sim)) { mkdir sim }
+cd sim
+xvlog ../blinky.v ../tb_blinky.v
+if ($LASTEXITCODE -eq 0) {
+    xelab tb_blinky -s tb_blinky_sim -debug typical
+    if ($LASTEXITCODE -eq 0) {
+        xsim tb_blinky_sim --gui
+    }
+}
+cd ..
+
+
+
+
+vivado -mode batch -source tcl/build.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
+vivado -mode batch -source tcl/program_board.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log

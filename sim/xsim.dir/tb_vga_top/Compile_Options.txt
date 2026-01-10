@@ -1,0 +1,1 @@
+-nolog "tb_vga_top" -debug "typical" -s "tb_vga_top" 

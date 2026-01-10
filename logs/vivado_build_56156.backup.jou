@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Jan  8 19:07:57 2026
+# Process ID         : 56156
+# Current directory  : D:/HDL_Environment
+# Command line       : vivado.exe -mode batch -source tcl/build.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
+# Log file           : D:/HDL_Environment/logs/vivado_build.log
+# Journal file       : D:/HDL_Environment/logs/vivado_build.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 28143 MB
+# Available Virtual  : 10559 MB
+#-----------------------------------------------------------
+source tcl/build.tcl
