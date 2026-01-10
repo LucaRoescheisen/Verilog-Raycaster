@@ -3,15 +3,16 @@
 
 module world(
     input       clk,
+    input       reset,
     input [3:0] xPos,
     input [3:0] yPos,
     input setup_complete,
     input is_new_ray,
-    output reg [1:0] is_wall, // 1 is wall, 0 is air 
+    output reg  is_wall, // 1 is wall, 0 is air 
     output reg [3:0] hit_coord_x,
     output reg [3:0] hit_coord_y
 );
-    initial is_wall = 0;
+
     reg [7:0] map [0:`WORLD_X*`WORLD_Y-1];
     initial begin 
         $readmemh("D:/HDL_Environment/src/map.hex", map);
@@ -20,6 +21,11 @@ module world(
     reg [3:0] delayed_x, delayed_y;
     reg lock;
     always @(posedge clk) begin 
+        if(reset) begin
+            is_wall <= 0;
+        end
+
+
         if (is_new_ray || setup_complete == 0) begin
             lock <= 0;
             is_wall <= 0;

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Jan 10 15:30:21 2026
-# Process ID         : 7820
+# Start of session at: Sat Jan 10 21:18:46 2026
+# Process ID         : 11316
 # Current directory  : D:/HDL_Environment/sim
 # Command line       : xsim.exe -source {xsim.dir/tb_vga_top/xsim_script.tcl}
 # Log file           : D:/HDL_Environment/sim/xsim.log
@@ -19,11 +19,22 @@
 # Host memory        : 16869 MB
 # Swap memory        : 11274 MB
 # Total Virtual      : 28143 MB
-# Available Virtual  : 9882 MB
+# Available Virtual  : 10071 MB
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/tb_vga_top/xsim_script.tcl
 open_wave_config D:/HDL_Environment/sim/tb_vga_top.wcfg
 open_wave_config D:/HDL_Environment/sim/tb_vga_top1.wcfg
-run 1000
+run 20ms
+current_wave_config {tb_vga_top1.wcfg}
+add_wave {{/tb_vga_top/uut/video_on}} 
+restart
+run 20ms
+current_wave_config {tb_vga_top1.wcfg}
+add_wave {{/tb_vga_top/uut/h_sync}} 
+current_wave_config {tb_vga_top1.wcfg}
+add_wave {{/tb_vga_top/uut/v_sync}} 
+restart
+run 20ms
+save_wave_config {D:/HDL_Environment/sim/tb_vga_top1.wcfg}
 close_sim

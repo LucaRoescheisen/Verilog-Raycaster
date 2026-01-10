@@ -5,13 +5,13 @@ module ray_counter(
 
     input wire[1:0]  fsm_state,
     output reg [9:0] ray_index,
-    output reg prev_ray_fed 
+    output reg ray_fed 
 );
-    reg ray_fed;
+    reg test;
     always @(posedge clk) begin
         if(reset) begin
             ray_index <= 0;
-            ray_fed  <= 1;
+            ray_fed  <= 0;
         end 
         else begin
             if(fsm_state == 2'b01 && ray_done) begin
@@ -29,7 +29,7 @@ module ray_counter(
                 ray_fed <= 0;
             end
         end
-            prev_ray_fed <= ray_fed;
+            
     end
 
 
@@ -46,13 +46,14 @@ module ray_feeder(
     output reg switchState
 
 );
-
+    reg prev_ray_done;
     always @(posedge clk) begin
+        prev_ray_done <= ray_done;
         if(reset) 
             switchState <= 1;
         else begin
             switchState <= 0;       // default
-            if(ray_done)
+            if(ray_done && !prev_ray_done)
                 switchState <= 1;   // 1-cycle pulse for FSM
             if(ray_fed)
                 switchState <= 1;   // 1-cycle pulse for FSM

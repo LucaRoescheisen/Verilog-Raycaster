@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Jan 10 15:30:21 2026
-# Process ID         : 7820
+# Start of session at: Sat Jan 10 21:18:46 2026
+# Process ID         : 11316
 # Current directory  : D:/HDL_Environment/sim
 # Command line       : xsim.exe -source {xsim.dir/tb_vga_top/xsim_script.tcl}
 # Log file           : D:/HDL_Environment/sim/xsim.log
@@ -19,7 +19,7 @@
 # Host memory        : 16869 MB
 # Swap memory        : 11274 MB
 # Total Virtual      : 28143 MB
-# Available Virtual  : 9882 MB
+# Available Virtual  : 10071 MB
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/tb_vga_top/xsim_script.tcl
@@ -118,15 +118,30 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XilinxSoftware/2025.1/Vi
 Time resolution is 1 ps
 open_wave_config D:/HDL_Environment/sim/tb_vga_top.wcfg
 open_wave_config D:/HDL_Environment/sim/tb_vga_top1.wcfg
-run 1000
+run 20ms
 Starting simulation...
- 112
- 112
- 111
- 111
- 111
- 110
+run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1600.672 ; gain = 42.020
+current_wave_config {tb_vga_top1.wcfg}
+tb_vga_top1.wcfg
+add_wave {{/tb_vga_top/uut/video_on}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20ms
+Starting simulation...
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 3265.051 ; gain = 0.000
+current_wave_config {tb_vga_top1.wcfg}
+tb_vga_top1.wcfg
+add_wave {{/tb_vga_top/uut/h_sync}} 
+current_wave_config {tb_vga_top1.wcfg}
+tb_vga_top1.wcfg
+add_wave {{/tb_vga_top/uut/v_sync}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20ms
+Starting simulation...
+run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 3283.441 ; gain = 0.000
+save_wave_config {D:/HDL_Environment/sim/tb_vga_top1.wcfg}
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting xsim at Sat Jan 10 15:30:50 2026...
+INFO: [Common 17-206] Exiting xsim at Sat Jan 10 21:35:20 2026...

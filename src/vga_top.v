@@ -6,11 +6,22 @@
 
 module vga_top(
     input clk,
-    input reset,
+
     output h_sync, v_sync,
     output reg[3:0] rgb_r, rgb_g, rgb_b
 );
     wire pixel_clk;
+    reg reset;
+    reg reset_flag = 0; // Initialize to 0 at start
+
+    always @(posedge clk) begin
+        if (!reset_flag) begin
+            reset      <= 1;   // Assert reset
+            reset_flag <= 1;   // "Lock" the flag so this never runs again
+        end else begin
+                reset      <= 0;   // De-assert reset and keep it 0
+        end
+    end
 
     wire [9:0] h_pos, v_pos;
 
@@ -20,9 +31,9 @@ module vga_top(
      wire [1:0] fsm_state;
     wire [9:0] ray_index;
     reg data_initialised;
-    initial data_initialised = 0;
+
     //Instantiate 25MHz clock, that uses system clock as source
-    vga_clk_25MHz clk_25MHz (.clk(clk), .pixel_clk(pixel_clk));
+    vga_clk_25MHz clk_25MHz (.clk(clk), .reset(reset), .pixel_clk(pixel_clk));
     vga_sync sync (.pixel_clk(pixel_clk), .reset(reset), .data_initialised(data_initialised), .h_sync(h_sync), .v_sync(v_sync), .h_pos(h_pos), .v_pos(v_pos));
     //spi_master spi_info (.CS(CS), .MOSI(MOSI), .SCK(SCK), .temp_data(spi_data), .received_data(received_spi_data_flag));
 
@@ -42,7 +53,7 @@ module vga_top(
         .ray_done(ray_done),
         .fsm_state(fsm_state), 
         .ray_index(ray_index),
-        .prev_ray_fed(ray_fed)
+        .ray_fed(ray_fed)
     );
 
 
@@ -100,14 +111,14 @@ module vga_top(
     wire setup_complete;
     ray_calculator calculator (
         .clk(clk),
+        .reset(reset),
         .xPos(xPos),
         .yPos(yPos),
         .player_angle(player_angle),
-        .ray_angle(ray_angle),
         .is_new_ray(is_new_ray),
         .fsm_state(fsm_state),
         .ray_index(ray_index),
-        .write_new_frame(write_new_frame),
+
         .ray_done(ray_done),
         .distance_x(distance_x),
         .distance_y(distance_y),
@@ -150,16 +161,23 @@ module vga_top(
     reg [8:0] count_2;
     reg switch;
     reg first_initialisation;
-    initial switch = 0;
-    initial first_initialisation = 1;
+
     always @(posedge clk) begin
+        if(reset) begin
+            data_initialised <= 0;
+            switch <= 0;
+            first_initialisation <= 1;
+        end
+
         if((v_pos == (`HEIGHT - 1) && h_pos ==(`WIDTH - 1)) || first_initialisation) begin
             write_new_frame <= 1;
             first_initialisation <= 0;
         end
 
         if (data_initialised == 0) begin
+
             if (height_found) begin // <--- Only write when the math is actually finished!
+                   
                 mem_height_buffer_1[ray_index] <= wall_height;
                 if(ray_index == 639) begin
                     data_initialised <= 1;
@@ -167,7 +185,7 @@ module vga_top(
                 end
             end
         end
-
+/*
         else begin
             if(switch == 0 && write_new_frame == 1) begin
                 mem_height_buffer_1[ray_index] <= wall_height;
@@ -180,20 +198,22 @@ module vga_top(
                 switch <= !switch;
                 write_new_frame <= 0;
             end
-        end
+        end*/
     end
 
    
 //Main loop
     wire video_on = (h_pos < `WIDTH) && (v_pos < `HEIGHT);
-    reg [9:0] pos_count;
+
     reg [8:0] column_height; //Used to reduce number of reads per cycle
-    initial pos_count = 0;
+
     wire [8:0] half_height = (column_height >> 1);
     wire [9:0] wall_top    = (half_height > 240) ? 0   : (240 - half_height);
     wire [9:0] wall_bottom = (half_height > 240) ? 479 : (240 + half_height);
     always @(posedge pixel_clk) begin
-        column_height <= switch ? mem_height_buffer_1[h_pos] : mem_height_buffer_2[h_pos];
+        if(h_pos < `WIDTH)
+        column_height <= mem_height_buffer_1[h_pos];
+        
     end
 
     always @(posedge pixel_clk) begin
@@ -204,23 +224,38 @@ module vga_top(
                 rgb_b <= 4'b0000;
             end
 
+            else if (v_pos > wall_bottom) begin
+                rgb_r <= 4'b0010;
+                rgb_g <= 4'b0010;
+                rgb_b <= 4'b0010;
+            end
+            
+            else if (v_pos < wall_top) begin
+                rgb_r <= 4'b0000;
+                rgb_g <= 4'b0000;
+                rgb_b <= 4'b0000;
+            end
         end else begin
-            rgb_r <= 4'b0000;
+        // FORCE EVERYTHING TO ZERO during blanking/sync
+        // This is what prevents the fading/sync issues
+        rgb_r <= 4'b0000;
+        rgb_g <= 4'b0000;
+        rgb_b <= 4'b0000;
+    end
+
+        
+/*
+           if(h_pos >= 1 && h_pos < 639 && v_pos >= 1 && v_pos < 479) begin
+                rgb_r <= 4'b1111;
+                rgb_g <= 4'b0000;
+                rgb_b <= 4'b0000;
+            end
+            else begin 
+                     rgb_r <= 4'b0000;
             rgb_g <= 4'b0000;
             rgb_b <= 4'b0000;
-        end
-
-
-
-          // if(h_pos >= 1 && h_pos < 20 && v_pos >= 1 && v_pos < 20) begin
-          //      rgb_r <= 4'b1111;
-            //    rgb_g <= 4'b0000;
-             //   rgb_b <= 4'b0000;
-           // end
-           // else begin 
-
-           // end
-        
+            end*/
+         
     end
 
 
@@ -253,18 +288,19 @@ endmodule
 //Generates a 25MHz clock
 module vga_clk_25MHz(
     input clk,
+    input reset,
     output reg pixel_clk
 );
-
-    initial begin
-      pixel_clk = 0;
-    end
-
 
     reg[1:0] counter = 0;
 
     always @(posedge clk) begin
-        if(counter == 1) begin
+        if(reset) begin
+               pixel_clk <= 0;
+
+        end
+
+        else if(counter == 1) begin
             counter <= 0;
             pixel_clk <= ~pixel_clk;
         end

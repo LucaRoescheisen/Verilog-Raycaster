@@ -3,10 +3,10 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jan  8 18:59:30 2026
-# Process ID         : 38168
+# Start of session at: Sat Jan 10 21:35:27 2026
+# Process ID         : 26680
 # Current directory  : D:/HDL_Environment
-# Command line       : vivado.exe -mode batch -source tcl/program_board.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
+# Command line       : vivado.exe -mode batch -source tcl/build.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
 # Log file           : D:/HDL_Environment/logs/vivado_build.log
 # Journal file       : D:/HDL_Environment/logs/vivado_build.jou
 # Running On         : LAPTOP-JJKUOBKD
@@ -19,8 +19,6 @@
 # Host memory        : 16869 MB
 # Swap memory        : 11274 MB
 # Total Virtual      : 28143 MB
-# Available Virtual  : 10471 MB
+# Available Virtual  : 9862 MB
 #-----------------------------------------------------------
-source tcl/program_board.tcl
-couldn't read file "tcl/program_board.tcl": no such file or directory
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  8 18:59:32 2026...
+source tcl/build.tcl

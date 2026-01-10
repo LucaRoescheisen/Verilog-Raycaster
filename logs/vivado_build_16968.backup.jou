@@ -3,10 +3,10 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jan  8 18:59:50 2026
-# Process ID         : 56164
+# Start of session at: Sat Jan 10 21:37:57 2026
+# Process ID         : 16968
 # Current directory  : D:/HDL_Environment
-# Command line       : vivado.exe -mode batch -source program_board.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
+# Command line       : vivado.exe -mode batch -source tcl/build.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
 # Log file           : D:/HDL_Environment/logs/vivado_build.log
 # Journal file       : D:/HDL_Environment/logs/vivado_build.jou
 # Running On         : LAPTOP-JJKUOBKD
@@ -19,6 +19,6 @@
 # Host memory        : 16869 MB
 # Swap memory        : 11274 MB
 # Total Virtual      : 28143 MB
-# Available Virtual  : 10433 MB
+# Available Virtual  : 9790 MB
 #-----------------------------------------------------------
-source program_board.tcl
+source tcl/build.tcl

@@ -17,7 +17,7 @@ module height_calculator(
     reg [11:0] prev_distance_final;
     reg height_found ;
     reg[11:0] height_lut [4095:0];
-    reg [9:0] height;
+    
     initial begin
         $readmemh("D:/HDL_Environment/src/height_lut.mem", height_lut);
 
@@ -29,7 +29,7 @@ module height_calculator(
             wall_height <= height_lut[distance_final];
             height_found <= 1;
            // $display("Dist Index: %d | Height Output: %d", distance_final, height_lut[distance_final]);
-            $display("%d", height_lut[distance_final]);
+           // $display("%d", height_lut[distance_final]);
         end
         else begin
         height_found <= 0;
