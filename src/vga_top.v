@@ -204,7 +204,7 @@ module vga_top(
    
 //Main loop
     wire video_on = (h_pos < `WIDTH) && (v_pos < `HEIGHT);
-
+    //test
     reg [8:0] column_height; //Used to reduce number of reads per cycle
 
     wire [8:0] half_height = (column_height >> 1);
