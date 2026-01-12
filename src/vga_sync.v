@@ -41,38 +41,40 @@ module vga_sync#(
 
 
     //Counts pixel clock pulses, and sets HIGH when VGA can write to screen (HSYNC)
-    always @(posedge pixel_clk) begin
-        if(reset) begin
+   always @(posedge pixel_clk) begin
+    if(reset) begin
+        h_count <= 0;
+        v_count <= 0;
+        h_pos <= 0;
+        v_pos <= 0;
+        h_sync <= 1;
+        v_sync <= 1;
+    end else begin
+        
+        // Horizontal counter
+        if(h_count == H_SYNC_PULSE - 1) begin
             h_count <= 0;
-            v_count <= 0;
+            // Vertical counter
+            if(v_count == V_SYNC_PULSE - 1)
+                v_count <= 0;
+            else
+                v_count <= v_count + 1;
+        end else begin
+            h_count <= h_count + 1;
         end
 
-        if(data_initialised) begin
-            if(h_count == H_SYNC_PULSE - 1) begin
-                    h_count <= 0;
-                    // Vertical counter
-                    if(v_count == V_SYNC_PULSE - 1)
-                        v_count <= 0;
-                    else
-                        v_count <= v_count + 1;
-                end else begin
-                    h_count <= h_count + 1;
-                end
+        // Sync signals (active low)
+        h_sync <= !((h_count >= (H_DISPLAY_TIME + H_FRONT)) && (h_count < (H_DISPLAY_TIME + H_FRONT + H_PULSE_WIDTH)));
+        v_sync <= !((v_count >= (V_DISPLAY_TIME + V_FRONT)) && (v_count < (V_DISPLAY_TIME + V_FRONT + V_PULSE_WIDTH)));
 
-            h_sync <= !((h_count >= (H_FRONT + H_DISPLAY_TIME )) && h_count < ((H_DISPLAY_TIME + H_FRONT + H_PULSE_WIDTH)));  //Active low
-            v_sync <= !((v_count >= (V_FRONT + V_DISPLAY_TIME)) && (v_count < (V_DISPLAY_TIME + V_FRONT + V_PULSE_WIDTH)));  //Active Low
+        // Pixel positions
+        h_pos <= h_count;
+        v_pos <= v_count;
 
-            if(h_count < H_DISPLAY_TIME)
-                h_pos <= h_count;
-            else
-                h_pos <= 0;
-
-            if(v_count <V_DISPLAY_TIME)
-                v_pos <= v_count;
-            else
-                v_pos <= 0;
-        end
+        
     end
+end
+
 
     
 endmodule

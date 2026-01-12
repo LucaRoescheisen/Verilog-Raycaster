@@ -62,14 +62,15 @@ module ray_calculator(
 
 
         if(fsm_state == 2'b01 && set_positional_values == 1/* && write_new_frame*/) begin
-            setup_timer <= 3'b001;
-            
+            setup_timer <= 3'b001;  
 
             x_i_p <= xPos[11:8];                                                    
             y_i_p <= yPos[11:8];
             x_f_p <= xPos[7:0];
             y_f_p <= yPos[7:0];
 
+            mapX <= xPos[11:8];
+            mapY <= yPos[11:8];
             full_trig_row <= trig_lut[player_angle];
             set_positional_values <= 0;
         end else begin
@@ -105,7 +106,110 @@ module ray_calculator(
     wire [15:0] abs_full_y = rayDirY[15] ? (-rayDirY) : rayDirY;
 
     //Find/Update Delta Values
+   always @(posedge clk) begin
+    // 2. Saturation check: If the ray is almost perfectly horizontal/vertical
+    if(ray_done) begin
+        deltaDistX <= 0;
+        deltaDistY <= 0;
+        step_x     <= 0;
+        step_y     <= ;
+    end
+
+    if (abs_full_x[14]) begin 
+        deltaDistX <= 24'h010000; // 1.0 in Q8.16
+    end else begin
+        // Indexing with [13:4] (1024 entries)
+        deltaDistX <= reciprocal_lut[abs_full_x[13:2]]; 
+    end
+
+    if (abs_full_y[14]) begin
+        deltaDistY <= 24'h010000;
+    end else begin
+        deltaDistY <= reciprocal_lut[abs_full_y[13:2]];
+    end
+
+        step_x <=rayDirX[15] ? -2'd1 : 2'd1;
+        step_y <=rayDirY[15] ? -2'd1 : 2'd1;
+    end
+
+    reg [23:0] prev_sideDistX;  
+    reg [23:0] prev_sideDistY;
     always @(posedge clk) begin
+        if(ray_done) begin
+            prev_sideDistX <= 0;
+            prev_sideDistY <= 0;
+            sideDistX      <= 0;
+            sideDistY      <= 0;
+            setup_complete <= 0;
+            mapX           <= xPos[11:8];
+            mapY           <= yPos[11:8];
+        end
+
+        if (setup_timer[1]) begin
+            if(step_x > 0) begin
+                sideDistX <= ((256 - x_f_p) * deltaDistX )>> 8;
+                setup_complete <= 1;
+            end else begin 
+                sideDistX <= ((x_f_p)       * deltaDistX) >> 8;
+                setup_complete <= 1;
+            end
+
+            if(step_y > 0) begin
+                sideDistY <= ((256 - y_f_p) * deltaDistY) >> 8;
+                setup_complete <= 1;
+            end else begin 
+                sideDistY <= ((y_f_p)       * deltaDistY) >> 8;
+                setup_complete <= 1;
+            end
+        end
+
+        if(setup_complete == 1 && is_wall == 0) begin
+            prev_side <= side;
+            prev_sideDistX <= sideDistX;
+            prev_sideDistY <= sideDistY;
+            if(sideDistX < sideDistY) begin
+                sideDistX <= sideDistX + deltaDistX;
+                mapX <= mapX + step_x;
+                side <= 0;
+            end
+            else begin
+                sideDistY <= sideDistY + deltaDistY;
+                mapY <= mapY + step_y;
+                side <= 1;
+            end
+
+        end
+    end
+
+    wire [23:0] raw_distance = (prev_side == 0) ? (prev_sideDistX - deltaDistX) 
+                                                : (prev_sideDistY - deltaDistY);
+
+    
+    always @(posedge clk) begin
+        if(is_wall && ray_done != 1 && setup_complete) begin
+            if(prev_side == 0) begin
+                distance_x <= raw_distance[19:8]; // Since we are Q8.16 we take 4 lowest bits (corresponds to 0- 16), then the 8 highest fractional bits (corresponding to 0- 256)
+                distance_y <= 0;
+            end
+            else begin
+                distance_y <= raw_distance[19:8]; 
+                distance_x <= 0;
+            end
+            ray_done <= 1;
+        end  
+        if(ray_done) begin
+            ray_done <= 0;
+        end
+    end
+
+endmodule       
+
+
+
+/*
+
+
+ always @(posedge clk) begin
         if(ray_done) begin
             deltaDistX <= 0;
             deltaDistY <= 0;
@@ -190,6 +294,4 @@ module ray_calculator(
             end
         end  
         ray_done <= (is_wall && !prev_is_wall && setup_complete);
-    end
-
-endmodule       
+    end*/

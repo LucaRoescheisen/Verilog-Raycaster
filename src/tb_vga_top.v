@@ -1,14 +1,14 @@
 
 module tb_vga_top;
     reg clk = 0;
-    reg reset = 0;
+
 
 
 
 
     vga_top uut (
-        .clk(clk),
-        .reset(reset)
+        .clk(clk)
+   
     );
 
     //spi_master uuut(.CS(CS), .MOSI(MOSI), .SCK(clk));
@@ -19,9 +19,9 @@ module tb_vga_top;
 
         $display("Starting simulation...");
         
-        reset = 1;
-        #10;
-        reset = 0;
+ 
+   
+       
 
         // Simulate toggling switchState to trigger FSM transitions
 

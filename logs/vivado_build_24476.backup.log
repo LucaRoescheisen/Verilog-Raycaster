@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jan  8 19:00:41 2026
-# Process ID         : 33636
+# Start of session at: Sat Jan 10 21:41:06 2026
+# Process ID         : 24476
 # Current directory  : D:/HDL_Environment
 # Command line       : vivado.exe -mode batch -source tcl/program_board.tcl -journal D:/HDL_Environment/logs/vivado_build.jou -log D:/HDL_Environment/logs/vivado_build.log
 # Log file           : D:/HDL_Environment/logs/vivado_build.log
@@ -19,7 +19,7 @@
 # Host memory        : 16869 MB
 # Swap memory        : 11274 MB
 # Total Virtual      : 28143 MB
-# Available Virtual  : 10501 MB
+# Available Virtual  : 10136 MB
 #-----------------------------------------------------------
 source tcl/program_board.tcl
 # open_hw_manager
@@ -46,10 +46,11 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 500.867 ; gain = 3.973
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 499.309 ; gain = 2.000
 # current_hw_target
 # open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B9E853A
-# set_property PROGRAM.FILE ../vga_proj.bit [current_hw_device]
-ERROR: [Labtools 27-2149] File ../vga_proj.bit not found. Check file name and file permissions.
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  8 19:00:52 2026...
+# set_property PROGRAM.FILE vga_proj.bit [current_hw_device]
+# program_hw_devices [current_hw_device]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 10 21:41:19 2026...
