@@ -12,16 +12,25 @@ module vga_top(
 );
     wire pixel_clk;
     reg reset;
-    reg reset_flag = 0; // Initialize to 0 at start
+    reg reset_flag = 0; 
 
     always @(posedge clk) begin
         if (!reset_flag) begin
-            reset      <= 1;   // Assert reset
-            reset_flag <= 1;   // "Lock" the flag so this never runs again
+            reset      <= 1;   
+            reset_flag <= 1;   
         end else begin
-                reset      <= 0;   // De-assert reset and keep it 0
+                reset      <= 0;   
         end
     end
+
+    reg [15:0] wall_height_reciprocal [0:511];
+    reg [11:0] wall_texture [0:255];//16x16 texture
+    initial begin
+        $readmemh("D:/HDL_Environment/src/reciprocal_wall_height_lut.mem", wall_height_reciprocal);
+        $readmemh("D:/HDL_Environment/src/wall_tex.mem", wall_texture);
+    end
+
+
 
     wire [9:0] h_pos, v_pos;
 
@@ -51,6 +60,7 @@ module vga_top(
         .clk(clk), 
         .reset(reset), 
         .ray_done(ray_done),
+        .write_new_frame(write_new_frame),
         .fsm_state(fsm_state), 
         .ray_index(ray_index),
         .ray_fed(ray_fed)
@@ -77,8 +87,7 @@ module vga_top(
 
     */
 
-   // wire[18:0] ray_angle;    //9 for o to 360 10 for decimal places
-   // assign ray_angle = 270<<10;
+
 
     fsm state_machine (
         .clk(clk),
@@ -109,6 +118,8 @@ module vga_top(
     wire hit_side;
     wire is_wall;
     wire setup_complete;
+    wire [1:0] lighting_factor;
+    wire [7:0] curent_tex_coord;
     ray_calculator calculator (
         .clk(clk),
         .reset(reset),
@@ -118,13 +129,15 @@ module vga_top(
         .is_new_ray(is_new_ray),
         .fsm_state(fsm_state),
         .ray_index(ray_index),
-
+        .write_new_frame(write_new_frame),
         .ray_done(ray_done),
         .distance_x(distance_x),
         .distance_y(distance_y),
         .prev_side(hit_side),
         .is_wall(is_wall),
-        .setup_complete(setup_complete)
+        .setup_complete(setup_complete),
+        .lighting_factor(lighting_factor),
+        .tex_coord(curent_tex_coord)
     );
 
     
@@ -142,63 +155,71 @@ module vga_top(
         .height_found_d(height_found)
     );
 
-    /*ray_calculator calculator(
-        .clk(clk),
-        .xPos(xPos),
-        .yPos(yPos),
-        .player_angle(player_angle),
-        .ray_angle(ray_angle),
-        .is_new_ray(is_new_ray),
-        .fsm_state(fsm_state),
-        .ray_done(ray_done),
-        .distance_x(distance_x),
-        .distance_y(distance_y)
-    );
-*/
+
     reg [8:0] mem_height_buffer_1 [639:0]; 
-    reg [8:0] mem_height_buffer_2 [639:0]; 
+    reg [8:0] mem_height_buffer_2 [639:0];
+    reg [1:0] mem_colour_buffer_1 [639:0]; 
+    reg [1:0] mem_colour_buffer_2 [639:0]; 
+    reg [3:0] tex_coords_buffer_1 [639:0];
+    reg [3:0] tex_coords_buffer_2 [639:0];
     reg [8:0] count_1;
     reg [8:0] count_2;
     reg switch;
     reg first_initialisation;
-
+    reg single_switch;
+    reg [9:0] prev_v_pos;
     always @(posedge clk) begin
+        prev_v_pos <= v_pos;
+
+
         if(reset) begin
             data_initialised <= 0;
             switch <= 0;
             first_initialisation <= 1;
+            write_new_frame <= 1;
         end
 
         if((v_pos == (`HEIGHT - 1) && h_pos ==(`WIDTH - 1)) || first_initialisation) begin
-            write_new_frame <= 1;
+           // write_new_frame <= 1;
             first_initialisation <= 0;
         end
 
         if (data_initialised == 0) begin
 
             if (height_found) begin // <--- Only write when the math is actually finished!
-                   
+                mem_colour_buffer_1[ray_index] <= lighting_factor;
                 mem_height_buffer_1[ray_index] <= wall_height;
+                tex_coords_buffer_1[ray_index] <= curent_tex_coord;
                 if(ray_index == 639) begin
                     data_initialised <= 1;
                     switch <= 1;
                 end
             end
         end
-/*
+
         else begin
             if(switch == 0 && write_new_frame == 1) begin
                 mem_height_buffer_1[ray_index] <= wall_height;
+                mem_colour_buffer_1[ray_index] <= lighting_factor;
+                tex_coords_buffer_1[ray_index] <= curent_tex_coord;
             end
             else if(switch == 1 && write_new_frame == 1) begin
                 mem_height_buffer_2[ray_index] <= wall_height;
+                mem_colour_buffer_2[ray_index] <= lighting_factor;
+                tex_coords_buffer_2[ray_index] <= curent_tex_coord;
             end
 
-            if(ray_index == 639 && height_found) begin
+            if(ray_index == 639 && height_found) begin  //Does it stay at 639 while it waits?
                 switch <= !switch;
-                write_new_frame <= 0;
+                write_new_frame <= 0;      
+                                        
             end
-        end*/
+            if(ray_index == 0 && v_pos ==0 && prev_v_pos != 0) begin
+                switch <= !switch;
+                write_new_frame <= 1;
+       
+            end
+        end
     end
 
    
@@ -210,18 +231,28 @@ module vga_top(
     wire [8:0] half_height = (column_height >> 1);
     wire [9:0] wall_top    = (half_height > 240) ? 0   : (240 - half_height);
     wire [9:0] wall_bottom = (half_height > 240) ? 479 : (240 + half_height);
+    wire [31:0] full_res_tex_y = ((v_pos - wall_top) * 16) * wall_height_reciprocal[column_height];
+    wire [3:0] tex_y = full_res_tex_y[19:16];
+    reg [2:0] lighting_catch;
+    reg [3:0] tex_x;
+
+
+    wire [11:0] pixel_colour = wall_texture[{tex_y, tex_x}];
+
     always @(posedge pixel_clk) begin
-        if(h_pos < `WIDTH)
-        column_height <= mem_height_buffer_1[h_pos];
-        
+        if(h_pos < `WIDTH) begin
+            column_height  <= !switch ? mem_height_buffer_1[h_pos] : mem_height_buffer_2[h_pos]; //Invert switch as we want to write to buffer that is not being used
+            lighting_catch <= !switch ? mem_colour_buffer_1[h_pos] : mem_colour_buffer_2[h_pos];
+            tex_x          <= !switch ? tex_coords_buffer_1[h_pos] : tex_coords_buffer_2[h_pos];
+        end
     end
 
     always @(posedge pixel_clk) begin
         if(data_initialised && video_on) begin
             if(v_pos >= wall_top && v_pos <= wall_bottom) begin
-                rgb_r <= 4'b1111;
-                rgb_g <= 4'b0000;
-                rgb_b <= 4'b0000;
+                rgb_r <= (pixel_colour[11:8] >> lighting_catch);
+                rgb_g <= (pixel_colour[7:4]  >> lighting_catch);
+                rgb_b <=  (pixel_colour[3:0]  >> lighting_catch);
             end
 
             else if (v_pos > wall_bottom) begin

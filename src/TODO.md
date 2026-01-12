@@ -13,3 +13,8 @@ When the count gets to 639, switch the usuable height buffer
 
 ## OUTPUT HEIGHT OUT OF THE HEIGHT CALCULATOR!!!!
 ## TELL CALCULATOR WHEN TO START AND WHEN TO STOP!!!!!
+
+
+
+1. Add textures, upload a mem file for XOR pattern
+2. Find either y or x pos depending on side hit

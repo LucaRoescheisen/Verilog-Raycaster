@@ -2,7 +2,7 @@ module ray_counter(
     input            clk,
     input            reset,
     input            ray_done,
-
+    input            write_new_frame,
     input wire[1:0]  fsm_state,
     output reg [9:0] ray_index,
     output reg ray_fed 
@@ -14,7 +14,7 @@ module ray_counter(
             ray_fed  <= 0;
         end 
         else begin
-            if(fsm_state == 2'b01 && ray_done) begin
+            if(fsm_state == 2'b01 && ray_done && write_new_frame) begin
                 ray_index <= ray_index + 1;
                 if(ray_index == 639)
                      ray_index <= 0;
