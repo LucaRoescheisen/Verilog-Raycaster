@@ -1,0 +1,6 @@
+logs/
+sim/
+.Xil/
+work.tb_vga_top.wdb
+clockInfo.txt
+tight_setup_hold_pins.txt
