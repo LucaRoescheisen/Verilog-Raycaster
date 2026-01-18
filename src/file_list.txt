@@ -7,3 +7,4 @@
 ../src/vga_sync.v
 ../src/spi_master.v
 ../src/height_calculator.v
+../src/update_player_pos.v

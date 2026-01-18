@@ -1,5 +1,3 @@
-
-
 module spi_master (
     input CS,           //IO10
     input MOSI,         //IO11
@@ -19,22 +17,25 @@ module spi_master (
 
 always @(posedge SCK or posedge CS) begin 
     if(CS == 1) begin 
-        addr_ptr <= 0;
+        addr_ptr <= 7;
         temp_data <= 0;
         received_data <= 0;
     end
     else begin
         temp_data[addr_ptr] <= MOSI;    //LSB to MSB
 
-        if(addr_ptr == 7) begin
+        if(addr_ptr ==  0) begin
             received_data <= 1'b1;
+            addr_ptr <= 7;
         end
-
-        addr_ptr <= addr_ptr + 1'b1;
+        else begin
+            received_data <= 0;
+            addr_ptr <= addr_ptr - 1'b1;
+        end
     end
-
-
 end
+
+
 
 
 endmodule

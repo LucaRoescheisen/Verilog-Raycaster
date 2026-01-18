@@ -1,31 +1,31 @@
 module ray_calculator(
-    input            clk,
-    input            reset,
+    input              clk,
+    input              reset,
     //input reset,//Ignore for the moment
-    input [11:0]     xPos,                 //4 bits for world location normalised (0-15) // 8 bits for fractional part (0-255)
-    input [11:0]     yPos,                   //4 bits for world location normalised (0-15) // 8 bits for fractional part (0-255)
-    input [8:0]      player_angle,
+    input [11:0]       xPos,                 //4 bits for world location normalised (0-15) // 8 bits for fractional part (0-255)
+    input [11:0]       yPos,                   //4 bits for world location normalised (0-15) // 8 bits for fractional part (0-255)
+    input [8:0]        player_angle,
 
-    input wire        is_new_ray,
-    input wire[1:0]   fsm_state,
-    input wire [9:0]  ray_index,
-    input wire       write_new_frame,
-    output reg       ray_done,
-    output reg[11:0] distance_x,
-    output reg[11:0] distance_y,
-    output reg prev_side,
-    output wire is_wall,
-    output reg setup_complete,
-    output reg [1:0] lighting_factor,
-    output reg[3:0] tex_coord
+    input wire         is_new_ray,
+    input wire [1:0]   fsm_state,
+    input wire [9:0]   ray_index,
+    input wire         write_new_frame,
+    output reg         ray_done,
+    output reg [11:0]  distance_x,
+    output reg [11:0]  distance_y,
+    output reg         prev_side,
+    output wire        is_wall,
+    output reg         setup_complete,
+    output reg [1:0]   lighting_factor,
+    output reg [3:0]   tex_coord
 );
 
 
     reg side;
-    reg[3:0] x_i_p; //x_int_player
-    reg[3:0] y_i_p;
-    reg[7:0] x_f_p;
-    reg[7:0] y_f_p;
+    wire[3:0] x_i_p = xPos[11:8];
+    wire[3:0] y_i_p = yPos[11:8];
+    wire[7:0] x_f_p = xPos[7:0];
+    wire[7:0] y_f_p = yPos[7:0];
     reg [3:0] mapX;
     reg [3:0] mapY;
     //wire [1:0] is_wall;
@@ -65,15 +65,8 @@ module ray_calculator(
             set_positional_values <= 1;
         end
 
-
         if(fsm_state == 2'b01 && set_positional_values == 1 && write_new_frame) begin
             setup_timer <= 3'b001;  
-
-            x_i_p <= xPos[11:8];                                                    
-            y_i_p <= yPos[11:8];
-            x_f_p <= xPos[7:0];
-            y_f_p <= yPos[7:0];
-
             full_trig_row <= trig_lut[player_angle];
             set_positional_values <= 0;
         end else begin
@@ -109,9 +102,11 @@ module ray_calculator(
     wire [15:0] abs_full_x = rayDirX[15] ? (-rayDirX) : rayDirX;
     wire [15:0] abs_full_y = rayDirY[15] ? (-rayDirY) : rayDirY;
 
+
+
+
     //Find/Update Delta Values
    always @(posedge clk) begin
-    // 2. Saturation check: If the ray is almost perfectly horizontal/vertical
     if(ray_done || reset) begin
         deltaDistX <= 0;
         deltaDistY <= 0;

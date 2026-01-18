@@ -6,7 +6,9 @@
 
 module vga_top(
     input clk,
-
+    input CS,
+    input MOSI,
+    input SCK,
     output h_sync, v_sync,
     output reg[3:0] rgb_r, rgb_g, rgb_b
 );
@@ -40,11 +42,12 @@ module vga_top(
      wire [1:0] fsm_state;
     wire [9:0] ray_index;
     reg data_initialised;
-
+    wire [7:0] spi_data;
+    wire received_spi_data_flag;
     //Instantiate 25MHz clock, that uses system clock as source
     vga_clk_25MHz clk_25MHz (.clk(clk), .reset(reset), .pixel_clk(pixel_clk));
     vga_sync sync (.pixel_clk(pixel_clk), .reset(reset), .data_initialised(data_initialised), .h_sync(h_sync), .v_sync(v_sync), .h_pos(h_pos), .v_pos(v_pos));
-    //spi_master spi_info (.CS(CS), .MOSI(MOSI), .SCK(SCK), .temp_data(spi_data), .received_data(received_spi_data_flag));
+    spi_master spi_info (.CS(CS), .MOSI(MOSI), .SCK(SCK), .temp_data(spi_data), .received_data(received_spi_data_flag));
 
     
 
@@ -69,13 +72,11 @@ module vga_top(
 
     wire[11:0] distance_x;
     wire[11:0] distance_y;
-    wire[11:0] xPos;
-    wire[11:0] yPos;
+   // wire[11:0] xPos = 12'b001000000000;
+    //wire[11:0] yPos = 12'b001000000000;
     wire[8:0] player_angle;
     wire[8:0] ray_angle;    //9 for o to 360 10 for decimal
 
-    assign xPos = 12'b001000000000;
-    assign yPos = 12'b001000000000;
     assign player_angle = 128;
     assign ray_angle = 128; //Needs to be normalised between 0 and 511
     /*
@@ -86,8 +87,19 @@ module vga_top(
     512 = 360deg
 
     */
+    wire[11:0] xPos;
+    wire[11:0] yPos;
 
+    update_player_pos player_pos(
+        .clk(clk),
+        .reset(reset),
+        .spi_flag(received_spi_data_flag),
+        .spi_data(spi_data),
+        .player_angle(player_angle),
+        .x_pos(xPos),
+        .y_pos(yPos)
 
+    );
 
     fsm state_machine (
         .clk(clk),

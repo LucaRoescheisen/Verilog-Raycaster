@@ -46,4 +46,4 @@ REM --- Run simulation ---
 echo =====================================================
 echo Launching xsim GUI...
 echo =====================================================
-call xsim tb_vga_top --gui
+call xsim tb_vga_top --gui -view tb_vga_top.wcfg -view spi.wcfg
