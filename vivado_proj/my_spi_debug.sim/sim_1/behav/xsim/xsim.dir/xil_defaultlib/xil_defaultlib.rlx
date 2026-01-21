@@ -1,0 +1,18 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+D:/HDL_Environment/src/fsm.v,1763012064,verilog,,D:/HDL_Environment/src/height_calculator.v,,fsm,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/height_calculator.v,1768030110,verilog,,D:/HDL_Environment/src/ray_calc.v,,height_calculator,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/ray_calc.v,1768951221,verilog,,D:/HDL_Environment/src/ray_feeder.v,,ray_calculator,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/ray_feeder.v,1768213076,verilog,,D:/HDL_Environment/src/spi_master.v,,ray_counter;ray_feeder,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/spi_master.v,1768957057,verilog,,D:/HDL_Environment/src/update_player_pos.v,,spi_master,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/tb_vga_sync.v,1761356573,verilog,,,,tb_vga_sync,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/tb_vga_top.v,1768725396,verilog,,,,tb_vga_top,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/update_player_pos.v,1768951411,verilog,,D:/HDL_Environment/src/vga_sync.v,,update_player_pos,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/vga_sync.v,1768041261,verilog,,D:/HDL_Environment/src/vga_top.v,,vga_sync,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/vga_top.v,1768953252,verilog,,D:/HDL_Environment/src/world.v,,vga_clk_25MHz;vga_top,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/src/world.v,1768027405,verilog,,D:/HDL_Environment/src/tb_vga_top.v,,world,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v,1768953043,verilog,,D:/HDL_Environment/src/fsm.v,,clk_25MHz,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v,1768953042,verilog,,D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v,,clk_25MHz_clk_wiz,,,../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef;../../../../my_spi_debug.ip_user_files/ipstatic,,,,,
+D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,

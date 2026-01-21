@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Starting simulation...
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance tb_vga_top.uut.pxl_25Mhz_clk.inst.plle2_adv_inst are not same.
+Sending packet

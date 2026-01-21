@@ -1,0 +1,130 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jan 21 12:00:58 2026
+| Host         : LAPTOP-JJKUOBKD running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_top_control_sets_placed.rpt
+| Design       : vga_top
+| Device       : xc7s50
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    52 |
+|    Minimum number of control sets                        |    52 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    73 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    52 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    11 |
+| >= 10 to < 12      |     5 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    27 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              95 |           32 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             103 |           65 |
+| Yes          | No                    | No                     |              67 |           21 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             110 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |                 Enable Signal                |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                | reset                                        | check                                        |                1 |              1 |         1.00 |
+|  pxl_25Mhz_clk/inst/clk_25MHz |                                              | sync/v_pos_reg[5]_0                          |                1 |              3 |         3.00 |
+|  pxl_25Mhz_clk/inst/clk_25MHz | sync/v_pos_reg[5]_1                          | sync/SS[0]                                   |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG                | calculator/world_map/reset_reg[0]            |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                | spi_info/sck_rise                            | spi_info/cs_sync1                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                | calculator/world_map/reset_reg_0[0]          |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                |                                              | reset                                        |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_1                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/switch_reg_0                         |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                |                                              | spi_info/cs_sync1                            |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_1                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_0                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_1                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_2                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_3                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_0                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/switch_reg                           |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_0                   |                                              |                2 |              8 |         4.00 |
+|  pxl_25Mhz_clk/inst/clk_25MHz |                                              | sync/h_count[9]_i_1_n_0                      |                3 |             10 |         3.33 |
+|  pxl_25Mhz_clk/inst/clk_25MHz | sync/v_count_0                               | reset                                        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                | state_machine/E[0]                           | state_machine/SR[0]                          |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                | spi_info/E[0]                                | player_pos/SR[0]                             |                3 |             10 |         3.33 |
+|  pxl_25Mhz_clk/inst/clk_25MHz | sync/E[0]                                    |                                              |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG                | calculator/world_map/setup_complete_reg_2[0] | calculator/world_map/setup_complete_reg_3[0] |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG                | calculator/world_map/setup_complete_reg_2[0] | calculator/world_map/prev_side_reg_0[0]      |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_3                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_5                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_8                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_2                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_4                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_3                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_6                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_7                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[8]_4                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_7                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_4                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_6                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_9                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_9                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_7                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_5                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_8                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[7]_6                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_2                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                | counter/ray_index_reg[9]_5                   |                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                |                                              | calculator/abs_full_x[14]                    |               23 |             24 |         1.04 |
+|  clk_IBUF_BUFG                | calculator/world_map/ray_done_reg[0]         |                                              |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG                |                                              | calculator/deltaDistY[23]_i_1_n_0            |               24 |             24 |         1.00 |
+|  clk_IBUF_BUFG                | calculator/world_map/E[0]                    |                                              |                6 |             24 |         4.00 |
+|  pxl_25Mhz_clk/inst/clk_25MHz |                                              | reset                                        |                8 |             28 |         3.50 |
+|  clk_IBUF_BUFG                | calculator/world_map/setup_complete_reg_4[0] | calculator/world_map/SR[0]                   |               13 |             48 |         3.69 |
+|  clk_IBUF_BUFG                |                                              |                                              |               32 |             95 |         2.97 |
++-------------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+

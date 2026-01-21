@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../XilinxSoftware/2025.1/Vivado/data/rsb/busdef" --include "../../../../my_spi_debug.ip_user_files/ipstatic" \
+"../../../../my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" \
+"../../../../my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" \
+"../../../../../src/fsm.v" \
+"../../../../../src/height_calculator.v" \
+"../../../../../src/ray_calc.v" \
+"../../../../../src/ray_feeder.v" \
+"../../../../../src/spi_master.v" \
+"../../../../../src/update_player_pos.v" \
+"../../../../../src/vga_sync.v" \
+"../../../../../src/vga_top.v" \
+"../../../../../src/world.v" \
+"../../../../../src/tb_vga_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,139 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jan 19 19:19:13 2026
+# Process ID         : 45164
+# Current directory  : D:/HDL_Environment
+# Command line       : vivado.exe -mode tcl -source src/run_vivado.tcl D:/HDL_Environment/vivado_gui_logs/vivado_build.jou -log D:/HDL_Environment/vivado_gui_logs/vivado_build.log
+# Log file           : D:/HDL_Environment/vivado_gui_logs/vivado_build.log
+# Journal file       : D:/HDL_Environment\vivado.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29217 MB
+# Available Virtual  : 11114 MB
+#-----------------------------------------------------------
+source src/run_vivado.tcl
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list SCK_IBUF_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {spi_data[0]} {spi_data[1]} {spi_data[2]} {spi_data[3]} {spi_data[4]} {spi_data[5]} {spi_data[6]} {spi_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list CS_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list MOSI_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list SCK_IBUF ]]
+set_property target_constrs_file D:/HDL_Environment/constraints/arty.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list SCK_IBUF_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {spi_data[0]} {spi_data[1]} {spi_data[2]} {spi_data[3]} {spi_data[4]} {spi_data[5]} {spi_data[6]} {spi_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list CS_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list MOSI_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list SCK_IBUF ]]
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1

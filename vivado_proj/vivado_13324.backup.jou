@@ -1,0 +1,183 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Jan 21 09:55:43 2026
+# Process ID         : 13324
+# Current directory  : D:/HDL_Environment/vivado_proj
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21348 D:\HDL_Environment\vivado_proj\my_spi_debug.xpr
+# Log file           : D:/HDL_Environment/vivado_proj/vivado.log
+# Journal file       : D:/HDL_Environment/vivado_proj\vivado.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29217 MB
+# Available Virtual  : 17520 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/HDL_Environment/vivado_proj/my_spi_debug.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_vga_top.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/xPos}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/yPos}} 
+restart
+run 200
+run 200
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/spi_info/temp_data}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/spi_info/received_data}} 
+restart
+run 300
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/spi_info/cs_sync1}} 
+restart
+run 400
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/spi_info/addr_ptr}} 
+restart
+run 400
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/spi_info/sck_rise}} 
+restart
+run 400
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+set_property xsim.view D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg [get_filesets sim_1]
+relaunch_sim
+synth_design -top vga_top -part xc7s50csga324-1 -lint 
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+show_objects -name mosi [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* } ]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/pixel_clk}} 
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/vga_clk}} 
+restart
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+set_property CONFIG.USE_LOCKED {true} [get_ips clk_25MHz]
+generate_target all [get_files  D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci]
+catch { config_ip_cache -export [get_ips -all clk_25MHz] }
+export_ip_user_files -of_objects [get_files D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci] -no_script -sync -force -quiet
+reset_run clk_25MHz_synth_1
+launch_runs clk_25MHz_synth_1 -jobs 8
+wait_on_run clk_25MHz_synth_1
+export_simulation -lib_map_path [list {modelsim=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/modelsim} {questa=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/questa} {riviera=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/riviera} {activehdl=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/activehdl}] -of_objects [get_files D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci] -directory D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files/sim_scripts -ip_user_files_dir D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files -ipstatic_source_dir D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+add_bp {D:/HDL_Environment/src/vga_top.v} 34
+remove_bps -file {D:/HDL_Environment/src/vga_top.v} -line 34
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/locked}} 
+restart
+run 1700
+run 1700
+run 1700
+run 1700
+run 1700
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+run 3000
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+run 3000
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/spi_info/sck_rise}} 
+restart
+run 3000
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+run 3000
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/spi_info/sck_sync0}} 
+current_wave_config {tb_vga_top_behav.wcfg}
+add_wave {{/tb_vga_top/uut/spi_info/sck_sync1}} 
+restart
+run 3000
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+run 3000
+close_sim
+launch_simulation
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+run 3000
+close_sim

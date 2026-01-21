@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top

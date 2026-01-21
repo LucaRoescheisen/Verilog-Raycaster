@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jan 19 23:43:59 2026
+# Process ID         : 2848
+# Current directory  : D:/HDL_Environment/vivado_proj
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent24184 D:\HDL_Environment\vivado_proj\my_spi_debug.xpr
+# Log file           : D:/HDL_Environment/vivado_proj/vivado.log
+# Journal file       : D:/HDL_Environment/vivado_proj\vivado.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29217 MB
+# Available Virtual  : 13508 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/HDL_Environment/vivado_proj/my_spi_debug.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vga_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+source tb_vga_top.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_vga_top/uut/clk_25MHz_inst/clk_25MHz}} 
+retart
+create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
+restart
+run 100
+run 100
+run 100
+run 100
+run 100
+run 100
+run 100
+close_sim

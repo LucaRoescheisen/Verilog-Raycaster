@@ -12,15 +12,15 @@ module tb_vga_top;
             #5;
             for (i = 7; i>= 0; i = i -1) begin
                 MOSI = data[i];
-                #5;
+                #20;
                 SCK = 1;
-                #5;
+                #20;
                 SCK = 0;
-                #5;
+                #20;
             end
             #10;
             CS = 1;             
-            #20;
+            #40;
         end
     
     endtask
@@ -33,7 +33,7 @@ module tb_vga_top;
     );
 
     //spi_master uuut(.CS(CS), .MOSI(MOSI), .SCK(clk));
-    always #5 clk = ~clk;
+    always #1 clk = ~clk;
 
     initial begin
 
@@ -42,7 +42,7 @@ module tb_vga_top;
         CS = 1;
         SCK = 0;
         MOSI = 0;
-        #100;
+        #2500;
          $display("Sending packet");
         send_spi_data(8'h02);
    

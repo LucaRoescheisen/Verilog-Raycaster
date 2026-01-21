@@ -8,8 +8,9 @@
 ## Clock Signals
 #set_property -dict { PACKAGE_PIN F14   IOSTANDARD LVCMOS33 } [get_ports { CLK12MHZ }]; #IO_L13P_T2_MRCC_15 Sch=uclk
 #create_clock -add -name sys_clk_pin -period 83.333 -waveform {0 41.667} [get_ports { CLK12MHZ }];
-set_property -dict { PACKAGE_PIN R2    IOSTANDARD SSTL135 } [get_ports clk]; #IO_L12P_T1_MRCC_34 Sch=ddr3_clk[200]
-create_clock -add -name sys_clk_pin -period 10.000 -waveform {0 5.000}  [get_ports clk];
+set_property -dict {PACKAGE_PIN R2 IOSTANDARD SSTL135} [get_ports clk]
+create_clock -period 10.000 -name sys_clk_pin [get_ports clk]
+
 
 ## Switches
 #set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports sw]; #IO_L20N_T3_A19_15 Sch=sw[0]
@@ -18,13 +19,13 @@ create_clock -add -name sys_clk_pin -period 10.000 -waveform {0 5.000}  [get_por
 #set_property -dict { PACKAGE_PIN M5    IOSTANDARD SSTL135 } [get_ports { sw[3] }]; #IO_L6N_T0_VREF_34 Sch=sw[3]
 
 ## RGB LEDs
-#set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { led0_r }]; #IO_L23N_T3_FWE_B_15 Sch=led0_r
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports led0_r]
 #set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { led0_g }]; #IO_L14N_T2_SRCC_15 Sch=led0_g
 #set_property -dict { PACKAGE_PIN F15   IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L13N_T2_MRCC_15 Sch=led0_b
-#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports { led1_r }]; #IO_L15N_T2_DQS_ADV_B_15 Sch=led1_r
+set_property -dict {PACKAGE_PIN E15 IOSTANDARD LVCMOS33} [get_ports led1_r]
 #set_property -dict { PACKAGE_PIN F18   IOSTANDARD LVCMOS33 } [get_ports { led1_g }]; #IO_L16P_T2_A28_15 Sch=led1_g
 #set_property -dict { PACKAGE_PIN E14   IOSTANDARD LVCMOS33 } [get_ports { led1_b }]; #IO_L15P_T2_DQS_15 Sch=led1_b
-
+set_false_path -to [get_ports {led0_r led1_r}]
 ## LEDs
 #set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports led]; #IO_L16N_T2_A27_15 Sch=led[2]
 #set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L17P_T2_A26_15 Sch=led[3]
@@ -58,22 +59,22 @@ create_clock -add -name sys_clk_pin -period 10.000 -waveform {0 5.000}  [get_por
 #set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { jb[7] }]; #IO_L12N_T1_MRCC_14 Sch=jb_n[4]
 
 ## Pmod Header JC
-set_property -dict { PACKAGE_PIN U15   IOSTANDARD LVCMOS33 } [get_ports rgb_r[0]]; #IO_L18P_T2_A12_D28_14 Sch=jc1/ck_io[41]
-set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports rgb_r[1]]; #IO_L18N_T2_A11_D27_14 Sch=jc2/ck_io[40]
-set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports rgb_r[2]]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=jc3/ck_io[39]
-set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports rgb_r[3]]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=jc4/ck_io[38]
-set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS33 } [get_ports rgb_b[0]]; #IO_L16P_T2_CSI_B_14 Sch=jc7/ck_io[37]
-set_property -dict { PACKAGE_PIN P13   IOSTANDARD LVCMOS33 } [get_ports rgb_b[1]]; #IO_L19P_T3_A10_D26_14 Sch=jc8/ck_io[36]
-set_property -dict { PACKAGE_PIN R13   IOSTANDARD LVCMOS33 } [get_ports rgb_b[2]]; #IO_L19N_T3_A09_D25_VREF_14 Sch=jc9/ck_io[35]
-set_property -dict { PACKAGE_PIN V14   IOSTANDARD LVCMOS33 } [get_ports rgb_b[3]]; #IO_L20P_T3_A08_D24_14 Sch=jc10/ck_io[34]
+set_property -dict {PACKAGE_PIN U15 IOSTANDARD LVCMOS33} [get_ports {rgb_r[0]}]
+set_property -dict {PACKAGE_PIN V16 IOSTANDARD LVCMOS33} [get_ports {rgb_r[1]}]
+set_property -dict {PACKAGE_PIN U17 IOSTANDARD LVCMOS33} [get_ports {rgb_r[2]}]
+set_property -dict {PACKAGE_PIN U18 IOSTANDARD LVCMOS33} [get_ports {rgb_r[3]}]
+set_property -dict {PACKAGE_PIN U16 IOSTANDARD LVCMOS33} [get_ports {rgb_b[0]}]
+set_property -dict {PACKAGE_PIN P13 IOSTANDARD LVCMOS33} [get_ports {rgb_b[1]}]
+set_property -dict {PACKAGE_PIN R13 IOSTANDARD LVCMOS33} [get_ports {rgb_b[2]}]
+set_property -dict {PACKAGE_PIN V14 IOSTANDARD LVCMOS33} [get_ports {rgb_b[3]}]
 
 ## Pmod Header JD
-set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports rgb_g[0]]; #IO_L20N_T3_A07_D23_14 Sch=jd1/ck_io[33]
-set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports rgb_g[1]]; #IO_L21P_T3_DQS_14 Sch=jd2/ck_io[32]
-set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports rgb_g[2]]; #IO_L21N_T3_DQS_A06_D22_14 Sch=jd3/ck_io[31]
-set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports rgb_g[3]]; #IO_L22P_T3_A05_D21_14 Sch=jd4/ck_io[30]
-set_property -dict { PACKAGE_PIN T13   IOSTANDARD LVCMOS33 } [get_ports h_sync]; #IO_L22N_T3_A04_D20_14 Sch=jd7/ck_io[29]
-set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports v_sync]; #IO_L23P_T3_A03_D19_14 Sch=jd8/ck_io[28]
+set_property -dict {PACKAGE_PIN V15 IOSTANDARD LVCMOS33} [get_ports {rgb_g[0]}]
+set_property -dict {PACKAGE_PIN U12 IOSTANDARD LVCMOS33} [get_ports {rgb_g[1]}]
+set_property -dict {PACKAGE_PIN V13 IOSTANDARD LVCMOS33} [get_ports {rgb_g[2]}]
+set_property -dict {PACKAGE_PIN T12 IOSTANDARD LVCMOS33} [get_ports {rgb_g[3]}]
+set_property -dict {PACKAGE_PIN T13 IOSTANDARD LVCMOS33} [get_ports h_sync]
+set_property -dict {PACKAGE_PIN R11 IOSTANDARD LVCMOS33} [get_ports v_sync]
 #set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { jd[6] }]; #IO_L23N_T3_A02_D18_14 Sch=jd9/ck_io[27]
 #set_property -dict { PACKAGE_PIN U11   IOSTANDARD LVCMOS33 } [get_ports { jd[7] }]; #IO_L24P_T3_A01_D17_14 Sch=jd10/ck_io[26]
 
@@ -95,10 +96,12 @@ set_property -dict { PACKAGE_PIN R11   IOSTANDARD LVCMOS33 } [get_ports v_sync];
 
 ## ChipKit SPI Header
 ## NOTE: The ChipKit SPI header ports can also be used as digital I/O and share FPGA pins with ck_io10-13. Do not use both at the same time.
-set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { CS   }]; #IO_L22P_T3_A17_15   Sch=ck_io10_ss
-set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { MOSI }]; #IO_L22N_T3_A16_15   Sch=ck_io11_mosi
+set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports CS]
+set_property -dict {PACKAGE_PIN H17 IOSTANDARD LVCMOS33} [get_ports MOSI]
 #set_property -dict { PACKAGE_PIN K14   IOSTANDARD LVCMOS33 } [get_ports { ck_io12_miso }]; #IO_L23P_T3_FOE_B_15 Sch=ck_io12_miso
-set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { SCK  }]; #IO_L14P_T2_SRCC_15  Sch=ck_io13_sck
+set_property -dict {PACKAGE_PIN G16 IOSTANDARD LVCMOS33} [get_ports SCK]
+set_false_path -from [get_ports {CS MOSI SCK}]
+
 
 ## ChipKit Inner Digital Header
 ## Note: these pins are shared with PMOD Headers JC and JD and cannot be used at the same time as the applicable PMOD interface(s)
@@ -195,3 +198,7 @@ set_property CONFIG_MODE SPIx4 [current_design]
 ## used the internal reference is set to half that value (i.e. 0.675v). Note that
 ## this property must be set even if SW3 is not used in the design.
 set_property INTERNAL_VREF 0.675 [get_iobanks 34]
+
+
+
+

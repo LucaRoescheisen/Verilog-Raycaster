@@ -11,12 +11,13 @@ poll_obj.register(sys.stdin, select.POLLIN)
 
 #SPI Setup
 cs = Pin(17, Pin.OUT)
-spi = SPI(0, baudrate=1000000, polarity=0 ,phase= 0, bits= 8, firstbit=SPI.LSB, sck=Pin(18), mosi=Pin(19), miso=Pin(16))
-
+spi = SPI(0, baudrate=1000000, polarity=0 ,phase= 0, bits= 8, firstbit=SPI.MSB, sck=Pin(18), mosi=Pin(19), miso=Pin(16))
+cs.value(1)
 # Signal that the Pico has rebooted
 print("PICO_READY")
 command = bytearray()
 while True:
+   ## led.on()
     if poll_obj.poll(100): 
         data = sys.stdin.readline().strip()
         if data:                   #If there is information in fifo extract it
@@ -35,5 +36,5 @@ while True:
             cs.value(0)
             spi.write(command)
             cs.value(1)
-            command.clear()
+            command = bytearray()
     utime.sleep(0.05)  

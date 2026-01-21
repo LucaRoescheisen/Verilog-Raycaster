@@ -1,0 +1,454 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jan 19 17:03:35 2026
+# Process ID         : 32256
+# Current directory  : D:/HDL_Environment
+# Command line       : vivado.exe -mode tcl -source src/run_vivado.tcl D:/HDL_Environment/vivado_gui_logs/vivado_build.jou -log D:/HDL_Environment/vivado_gui_logs/vivado_build.log
+# Log file           : D:/HDL_Environment/vivado_gui_logs/vivado_build.log
+# Journal file       : D:/HDL_Environment\vivado.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29217 MB
+# Available Virtual  : 11990 MB
+#-----------------------------------------------------------
+source src/run_vivado.tcl
+# create_project -force my_spi_debug ./vivado_proj -part xc7s50csga324-1
+# add_files [glob ./src/*.v]
+# set_property top vga_top [current_fileset]
+# update_compile_order -fileset sources_1
+# add_files -fileset constrs_1 ./constraints/arty.xdc
+# start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc702\1.4\board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XilinxSoftware/2025.1/Vivado/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Mon Jan 19 17:04:03 2026] Launched synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s50csga324-1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1773.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1323 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'vga_top' is not ideal for floorplanning, since the cellview 'ray_calculator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/HDL_Environment/constraints/arty.xdc]
+Finished Parsing XDC File [D:/HDL_Environment/constraints/arty.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1915.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 100 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 20 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 80 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2247.816 ; gain = 621.895
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
+endgroup
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_1 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_1 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list SCK_IBUF_BUFG ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {spi_data[0]} {spi_data[1]} {spi_data[2]} {spi_data[3]} {spi_data[4]} {spi_data[5]} {spi_data[6]} {spi_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list MOSI_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list SCK_IBUF ]]
+set_property port_width 1 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list spi_tick ]]
+set_property target_constrs_file D:/HDL_Environment/constraints/arty.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2292.391 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2292.391 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2292.391 ; gain = 11.363
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2292.391 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.391 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2292.391 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2292.391 ; gain = 0.000
+[Mon Jan 19 17:06:37 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Jan 19 17:10:33 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2025.1
+  **** Build date : May  6 2025 at 09:15:36
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.1.0
+  ****** Build date   : May 14 2025-05:15:27
+    **** Build number : 2025.1.1747163727
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2292.391 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B9E853A
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_1' at location 'uuid_3B505A030738513C98471D25F5B1F848' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_1' at location 'uuid_3B505A030738513C98471D25F5B1F848' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.ltx} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/vga_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+INFO: [Labtools 27-2302] Device xc7s50 (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'h01 [get_hw_probes spi_data -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*" ]
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[6]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[15]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[13]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[11]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[9]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[8]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[1]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[15]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[12]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[11]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[0]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[9]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[6]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[33]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[30]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[29]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[21]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[20]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[19]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[18]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[5]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[34]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[21]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[12]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[0]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[35]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[7]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[26]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[19]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[3]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[10]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[31]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[36]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[16]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[14]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[16]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[8]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[22]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[5]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[34]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[6]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[6]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[13]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[2]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[13]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[22]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[7]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[13]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[24]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[27]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[14]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[14]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[27]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[23]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[1]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[28]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[10]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[28]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[9]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[31]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[30]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[32]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[2]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[7]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[29]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport0_i_0[2]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[4]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[2]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[4]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[33]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[3]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[11]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[8]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[20]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[0]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[25]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[14]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[1]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[4]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[24]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[10]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[17]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[23]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[8]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[26]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[16]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[7]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[0]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[10]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[5]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[9]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport0_o_0[25]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_oport1_i_1[12]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[11]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[12]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[15]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[35]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[32]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[1]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'sl_iport1_o_1[36]'; it was auto-generated for Vivado debug.
+INFO: [Common 17-14] Message 'Chipscope 16-3' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0 ]
+endgroup
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_1 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1 ]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_1 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list SCK_IBUF_BUFG ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {spi_data[0]} {spi_data[1]} {spi_data[2]} {spi_data[3]} {spi_data[4]} {spi_data[5]} {spi_data[6]} {spi_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list MOSI_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list SCK_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list CS_IBUF ]]
+set_property port_width 1 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list spi_tick ]]
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2410.730 ; gain = 0.180
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.730 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2410.730 ; gain = 0.180
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2410.730 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.730 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2410.730 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2410.730 ; gain = 0.180
+[Mon Jan 19 17:17:22 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2415.062 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2415.062 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2415.062 ; gain = 0.156
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2415.062 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2415.062 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2415.062 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2415.062 ; gain = 0.156
+[Mon Jan 19 17:21:47 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7s50_0] -filter {CELL_NAME=~"u_ila_0"}]
+ERROR: [Labtools 27-3428] Ila core [hw_ila_1] clock has stopped. Unable to arm ILA core.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210352B9E853A
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 19 17:26:24 2026...

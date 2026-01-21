@@ -6,14 +6,31 @@
 
 module vga_top(
     input clk,
-    input CS,
-    input MOSI,
-    input SCK,
+   input CS,
+   input MOSI,
+   input SCK,
+    output reg led0_r,
+    output reg led1_r,
     output h_sync, v_sync,
     output reg[3:0] rgb_r, rgb_g, rgb_b
+    
 );
+
+
     wire pixel_clk;
+    wire locked;
     reg reset;
+    
+    clk_25MHz pxl_25Mhz_clk(
+        .clk_25MHz(pixel_clk),
+        .reset(reset),
+        .locked(locked),
+        .clk_in1(clk)
+    );
+
+
+    
+    
     reg reset_flag = 0; 
 
     always @(posedge clk) begin
@@ -21,10 +38,42 @@ module vga_top(
             reset      <= 1;   
             reset_flag <= 1;   
         end else begin
-                reset      <= 0;   
+                reset  <= 0;   
         end
     end
 
+     reg check;
+    wire received_spi_data_flag;
+    reg spi_sync_0, spi_sync_1;
+    (* mark_debug = "true" *) wire spi_tick;
+
+    always @(posedge clk) begin
+        spi_sync_0 <= received_spi_data_flag;
+        spi_sync_1 <= spi_sync_0;
+    end
+
+assign spi_tick = spi_sync_0 & ~spi_sync_1;
+    always @(posedge clk) begin
+        if(reset) begin
+            led1_r <= 0;
+            led0_r <= 0;
+            check <= 0;
+        end
+        else begin
+            led1_r <= 1;
+        end
+
+        if(spi_tick) begin
+            check <= 1;
+        end
+
+        if(check) begin
+            led0_r <= 1;
+
+        end
+
+
+    end
     reg [15:0] wall_height_reciprocal [0:511];
     reg [11:0] wall_texture [0:255];//16x16 texture
     initial begin
@@ -43,11 +92,11 @@ module vga_top(
     wire [9:0] ray_index;
     reg data_initialised;
     wire [7:0] spi_data;
-    wire received_spi_data_flag;
+ 
     //Instantiate 25MHz clock, that uses system clock as source
-    vga_clk_25MHz clk_25MHz (.clk(clk), .reset(reset), .pixel_clk(pixel_clk));
+   // vga_clk_25MHz clk_25MHz (.clk(clk), .reset(reset), .pixel_clk(pixel_clk));
     vga_sync sync (.pixel_clk(pixel_clk), .reset(reset), .data_initialised(data_initialised), .h_sync(h_sync), .v_sync(v_sync), .h_pos(h_pos), .v_pos(v_pos));
-    spi_master spi_info (.CS(CS), .MOSI(MOSI), .SCK(SCK), .temp_data(spi_data), .received_data(received_spi_data_flag));
+    spi_master spi_info (.clk(clk), .CS(CS), .MOSI(MOSI), .SCK(SCK), .temp_data(spi_data), .received_data(received_spi_data_flag));
 
     
 
@@ -131,7 +180,7 @@ module vga_top(
     wire is_wall;
     wire setup_complete;
     wire [1:0] lighting_factor;
-    wire [7:0] curent_tex_coord;
+    wire [3:0] curent_tex_coord;
     ray_calculator calculator (
         .clk(clk),
         .reset(reset),
@@ -284,43 +333,9 @@ module vga_top(
         rgb_r <= 4'b0000;
         rgb_g <= 4'b0000;
         rgb_b <= 4'b0000;
+        end
     end
-
-        
-/*
-           if(h_pos >= 1 && h_pos < 639 && v_pos >= 1 && v_pos < 479) begin
-                rgb_r <= 4'b1111;
-                rgb_g <= 4'b0000;
-                rgb_b <= 4'b0000;
-            end
-            else begin 
-                     rgb_r <= 4'b0000;
-            rgb_g <= 4'b0000;
-            rgb_b <= 4'b0000;
-            end*/
-         
-    end
-
-
-    //2FF Synchronisation
-   //reg[1:0] sync_spi_flag = 0;
-   //always @(posedge pixel_clk) begin
-   //    sync_spi_flag <= {sync_spi_flag[0], received_spi_data_flag};
-   //end
-
-   //wire spi_data_ready = (sync_spi_flag & 2'b01);
-
-
-   //always @(posedge pixel_clk) begin 
-   //    if (spi_data_ready) begin                     
-   //        if(bram_ptr == `WIDTH -1)
-   //            bram_ptr <= 0;
-   //        else begin
-   //            column_buffer[bram_ptr] <= spi_data[7:0];
-   //            bram_ptr <= bram_ptr + 1;
-   //       end
-   //    end    
-   //end 
+    
 
 
 endmodule
@@ -329,6 +344,7 @@ endmodule
 
 
 //Generates a 25MHz clock
+
 module vga_clk_25MHz(
     input clk,
     input reset,

@@ -1,0 +1,161 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jan 21 12:01:24 2026
+| Host         : LAPTOP-JJKUOBKD running 64-bit major release  (build 9200)
+| Command      : report_methodology -file vga_top_methodology_drc_routed.rpt -pb vga_top_methodology_drc_routed.pb -rpx vga_top_methodology_drc_routed.rpx
+| Design       : vga_top
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 25
++---------+----------+-----------------------------------------------------------+--------+
+| Rule    | Severity | Description                                               | Checks |
++---------+----------+-----------------------------------------------------------+--------+
+| SYNTH-5 | Warning  | Mapped onto distributed RAM because of timing constraints | 20     |
+| SYNTH-6 | Warning  | Timing of a RAM block might be sub-optimal                | 5      |
++---------+----------+-----------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-5#1 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#2 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#3 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#4 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#5 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_256_383_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#6 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_256_383_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#7 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_384_511_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#8 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_384_511_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#9 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_512_639_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#10 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_1_reg_512_639_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#11 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#12 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#13 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#14 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#15 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_256_383_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#16 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_256_383_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#17 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_384_511_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#18 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_384_511_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#19 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_512_639_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#20 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance mem_colour_buffer_2_reg_512_639_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance calculator/full_trig_row_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance calculator/ray_index_pipe_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance column_height_reg_rep, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance height_calc/wall_height_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance height_calc/wall_height_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+

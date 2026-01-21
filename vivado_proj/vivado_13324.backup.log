@@ -1,0 +1,2010 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Jan 21 09:55:43 2026
+# Process ID         : 13324
+# Current directory  : D:/HDL_Environment/vivado_proj
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21348 D:\HDL_Environment\vivado_proj\my_spi_debug.xpr
+# Log file           : D:/HDL_Environment/vivado_proj/vivado.log
+# Journal file       : D:/HDL_Environment/vivado_proj\vivado.jou
+# Running On         : LAPTOP-JJKUOBKD
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16869 MB
+# Swap memory        : 12348 MB
+# Total Virtual      : 29217 MB
+# Available Virtual  : 17520 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/HDL_Environment/vivado_proj/my_spi_debug.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc702\1.4\board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/XilinxSoftware/2025.1/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XilinxSoftware/2025.1/Vivado/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 1641.746 ; gain = 291.996
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1672.867 ; gain = 24.324
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/xPos}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/yPos}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 200
+Starting simulation...
+Sending packet
+run 200
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/spi_info/temp_data}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/spi_info/received_data}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 300
+Starting simulation...
+Sending packet
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/spi_info/cs_sync1}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 400
+Starting simulation...
+Sending packet
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/spi_info/addr_ptr}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 400
+Starting simulation...
+Sending packet
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_vga_top/uut/spi_info/sck_rise}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 400
+Starting simulation...
+Sending packet
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+set_property xsim.view D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg [get_filesets sim_1]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+Starting simulation...
+Sending packet
+synth_design -top vga_top -part xc7s50csga324-1 -lint 
+Command: synth_design -top vga_top -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25352
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3347.094 ; gain = 0.000
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [D:/HDL_Environment/src/vga_top.v:7]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/reciprocal_wall_height_lut.mem' is read successfully [D:/HDL_Environment/src/vga_top.v:73]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/wall_tex.mem' is read successfully [D:/HDL_Environment/src/vga_top.v:74]
+INFO: [Synth 8-6157] synthesizing module 'vga_clk_25MHz' [D:/HDL_Environment/src/vga_top.v:375]
+INFO: [Synth 8-6155] done synthesizing module 'vga_clk_25MHz' (1#1) [D:/HDL_Environment/src/vga_top.v:375]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [D:/HDL_Environment/src/vga_sync.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (2#1) [D:/HDL_Environment/src/vga_sync.v:3]
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [D:/HDL_Environment/src/spi_master.v:1]
+WARNING: [Synth 8-6014] Unused sequential element sck_sync0_reg was removed.  [D:/HDL_Environment/src/spi_master.v:22]
+WARNING: [Synth 8-6014] Unused sequential element sck_sync1_reg was removed.  [D:/HDL_Environment/src/spi_master.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (3#1) [D:/HDL_Environment/src/spi_master.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ray_counter' [D:/HDL_Environment/src/ray_feeder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ray_counter' (4#1) [D:/HDL_Environment/src/ray_feeder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'update_player_pos' [D:/HDL_Environment/src/update_player_pos.v:1]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/trig_lut.mem' is read successfully [D:/HDL_Environment/src/update_player_pos.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'update_player_pos' (5#1) [D:/HDL_Environment/src/update_player_pos.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fsm' [D:/HDL_Environment/src/fsm.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'fsm' (6#1) [D:/HDL_Environment/src/fsm.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ray_feeder' [D:/HDL_Environment/src/ray_feeder.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'ray_feeder' (7#1) [D:/HDL_Environment/src/ray_feeder.v:41]
+INFO: [Synth 8-6157] synthesizing module 'ray_calculator' [D:/HDL_Environment/src/ray_calc.v:1]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/trig_lut.mem' is read successfully [D:/HDL_Environment/src/ray_calc.v:51]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/reciprocal_lut.mem' is read successfully [D:/HDL_Environment/src/ray_calc.v:52]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/cam_x_lut.mem' is read successfully [D:/HDL_Environment/src/ray_calc.v:53]
+INFO: [Synth 8-6157] synthesizing module 'world' [D:/HDL_Environment/src/world.v:4]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/map.hex' is read successfully [D:/HDL_Environment/src/world.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'world' (8#1) [D:/HDL_Environment/src/world.v:4]
+WARNING: [Synth 8-3936] Found unconnected internal register 'distance_final_reg_reg' and it is trimmed from '24' to '20' bits. [D:/HDL_Environment/src/ray_calc.v:212]
+INFO: [Synth 8-6155] done synthesizing module 'ray_calculator' (9#1) [D:/HDL_Environment/src/ray_calc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'height_calculator' [D:/HDL_Environment/src/height_calculator.v:3]
+INFO: [Synth 8-3876] $readmem data file 'D:/HDL_Environment/src/height_lut.mem' is read successfully [D:/HDL_Environment/src/height_calculator.v:22]
+WARNING: [Synth 8-6014] Unused sequential element prev_distance_final_reg was removed.  [D:/HDL_Environment/src/height_calculator.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'height_calculator' (10#1) [D:/HDL_Environment/src/height_calculator.v:3]
+WARNING: [Synth 8-6014] Unused sequential element first_initialisation_reg was removed.  [D:/HDL_Environment/src/vga_top.v:232]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (11#1) [D:/HDL_Environment/src/vga_top.v:7]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3347.094 ; gain = 0.000
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jan 21 10:05:59 2026
+| Host         : LAPTOP-JJKUOBKD running 64-bit major release  (build 9200)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++-----------+------------------+--------------+----------+
+| Rule ID   | Severity         | # Violations | # Waived |
++-----------+------------------+--------------+----------+
+| ASSIGN-1  | WARNING          | 6            | 0        |
+| ASSIGN-2  | CRITICAL WARNING | 8            | 0        |
+| ASSIGN-5  | WARNING          | 5            | 0        |
+| ASSIGN-6  | WARNING          | 19           | 0        |
+| ASSIGN-10 | WARNING          | 2            | 0        |
++-----------+------------------+--------------+----------+
+
+
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'prev_distance_final' was assigned but not read. 
+RTL Name 'prev_distance_final', Hierarchy 'height_calculator', File 'D:/HDL_Environment/src/height_calculator.v', Line 17.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'is_wall' are not read. First unread bit index is 0. 
+RTL Name 'is_wall', Hierarchy 'height_calculator', File 'height_calculator.v', Line 9.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 16 32) of add/sub cluster ending with expression '(dirX + part_x_reg[15:0])' could yield maximum size of 33, but only width of 16 is being used.
+Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 110.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 32 32) of add/sub cluster ending with expression '(dirY + part_y_reg[15:0])' could yield maximum size of 33, but only width of 16 is being used.
+Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 111.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 41 32) of add/sub cluster ending with expression '($signed({12'b0,xPos,8'b0}) + (x_part_reg >>> 14))' could yield maximum size of 42, but only width of 32 is being used.
+Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 213.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 41 32) of add/sub cluster ending with expression '($signed({12'b0,yPos,8'b0}) + (y_part_reg >>> 14))' could yield maximum size of 42, but only width of 32 is being used.
+Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 214.
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(dirX + part_x_reg[15:0])' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'ray_calculator', File D:/HDL_Environment/src/ray_calc.v, Line 110
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(dirY + part_y_reg[15:0])' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'ray_calculator', File D:/HDL_Environment/src/ray_calc.v, Line 111
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(mapX + step_x)' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'ray_calculator', File D:/HDL_Environment/src/ray_calc.v, Line 185
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(mapY + step_y)' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'ray_calculator', File D:/HDL_Environment/src/ray_calc.v, Line 190
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'abs_full_x' are not read. First unread bit index is 0. 
+RTL Name 'abs_full_x', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 114.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'abs_full_y' are not read. First unread bit index is 0. 
+RTL Name 'abs_full_y', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 115.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'distance_final_reg' are not read. First unread bit index is 0. 
+RTL Name 'distance_final_reg', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 210.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'hit_x_coord' was assigned but not read. 
+RTL Name 'hit_x_coord', Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 34.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'hit_y_coord' was assigned but not read. 
+RTL Name 'hit_y_coord', Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 35.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'part_x_reg' are not read. First unread bit index is 16. 
+RTL Name 'part_x_reg', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 101.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'part_y_reg' are not read. First unread bit index is 16. 
+RTL Name 'part_y_reg', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 101.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'scaled_planeX' are not read. First unread bit index is 16. 
+RTL Name 'scaled_planeX', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 93.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'scaled_planeY' are not read. First unread bit index is 16. 
+RTL Name 'scaled_planeY', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 94.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'wall_hit_x_reg' are not read. First unread bit index is 0. 
+RTL Name 'wall_hit_x_reg', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 209.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'wall_hit_y_reg' are not read. First unread bit index is 0. 
+RTL Name 'wall_hit_y_reg', Hierarchy 'ray_calculator', File 'ray_calc.v', Line 209.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'x_i_p' was assigned but not read. 
+RTL Name 'x_i_p', Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 25.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'y_i_p' was assigned but not read. 
+RTL Name 'y_i_p', Hierarchy 'ray_calculator', File 'D:/HDL_Environment/src/ray_calc.v', Line 26.
+WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'test' declared and are not set.
+RTL Name 'test', Hierarchy 'ray_counter', File 'D:/HDL_Environment/src/ray_feeder.v', Line 10.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'sck_rise' was assigned but not read. 
+RTL Name 'sck_rise', Hierarchy 'spi_master', File 'D:/HDL_Environment/src/spi_master.v', Line 31.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 12 32) of add/sub cluster ending with expression '(x_pos + $signed(((dir_x * $signed(SPEED)) >>> 14)))' could yield maximum size of 33, but only width of 12 is being used.
+Hierarchy 'update_player_pos', File 'D:/HDL_Environment/src/update_player_pos.v', Line 49.
+WARNING: [Synth 37-78] [ASSIGN-1]Input operands(of sizes 12 32) of add/sub cluster ending with expression '(y_pos + $signed(((dir_y * $signed(SPEED)) >>> 14)))' could yield maximum size of 33, but only width of 12 is being used.
+Hierarchy 'update_player_pos', File 'D:/HDL_Environment/src/update_player_pos.v', Line 50.
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(x_pos + $signed(((dir_x * $signed(SPEED)) >>> 14)))' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'update_player_pos', File D:/HDL_Environment/src/update_player_pos.v, Line 49
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '+' in expression '(y_pos + $signed(((dir_y * $signed(SPEED)) >>> 14)))' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'update_player_pos', File D:/HDL_Environment/src/update_player_pos.v, Line 50
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '-' in expression '(x_pos - ((dir_x * SPEED) >>> 14))' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'update_player_pos', File D:/HDL_Environment/src/update_player_pos.v, Line 53
+CRITICAL WARNING: [Synth 37-81] [ASSIGN-2]Operator '-' in expression '(y_pos - ((dir_y * SPEED) >>> 14))' has mixed signed and unsigned types on its operands, the result will be unsigned.
+Hierarchy 'update_player_pos', File D:/HDL_Environment/src/update_player_pos.v, Line 54
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'data_initialised' are not read. First unread bit index is 0. 
+RTL Name 'data_initialised', Hierarchy 'vga_sync', File 'vga_sync.v', Line 28.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'count_1' are not set. First unset bit index is 0. 
+RTL Name 'count_1', Hierarchy 'vga_top', File 'vga_top.v', Line 219.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'count_2' are not set. First unset bit index is 0. 
+RTL Name 'count_2', Hierarchy 'vga_top', File 'vga_top.v', Line 220.
+WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'pixel_clk' declared and are not set.
+RTL Name 'pixel_clk', Hierarchy 'vga_top', File 'D:/HDL_Environment/src/vga_top.v', Line 25.
+WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'single_switch' declared and are not set.
+RTL Name 'single_switch', Hierarchy 'vga_top', File 'D:/HDL_Environment/src/vga_top.v', Line 223.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'full_res_tex_y' are not read. First unread bit index is 0. 
+RTL Name 'full_res_tex_y', Hierarchy 'vga_top', File 'vga_top.v', Line 288.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'ray_angle' was assigned but not read. 
+RTL Name 'ray_angle', Hierarchy 'vga_top', File 'D:/HDL_Environment/src/vga_top.v', Line 120.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'ray_index_test' was assigned but not read. 
+RTL Name 'ray_index_test', Hierarchy 'vga_top', File 'D:/HDL_Environment/src/vga_top.v', Line 171.
+WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'wall_height' are not read. First unread bit index is 9. 
+RTL Name 'wall_height', Hierarchy 'vga_top', File 'vga_top.v', Line 96.
+INFO: [Synth 37-85] Total of 40 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3347.094 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 37 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3347.094 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'clk' on this module [D:/HDL_Environment/src/vga_top.v:92]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+WARNING: Simulation object /tb_vga_top/uut/spi_info/cs_sync1 was not found in the design.
+WARNING: Simulation object /tb_vga_top/uut/spi_info/sck_rise was not found in the design.
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3347.094 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Jan 21 10:10:04 2026] Launched synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Jan 21 10:11:37 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/spi_master.v" Line 1. Module spi_master doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 1. Module ray_counter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/update_player_pos.v" Line 1. Module update_player_pos doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/fsm.v" Line 9. Module fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_feeder.v" Line 41. Module ray_feeder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/ray_calc.v" Line 1. Module ray_calculator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/HDL_Environment/src/height_calculator.v" Line 3. Module height_calculator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Jan 21 10:24:53 2026] Launched synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Wed Jan 21 10:28:47 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Jan 21 10:33:24 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 3893.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1320 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'vga_top' is not ideal for floorplanning, since the cellview 'ray_calculator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3893.035 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.134 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.189 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.189 . Memory (MB): peak = 3893.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3893.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 100 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 20 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 80 instances
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3893.035 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Jan 21 10:36:37 2026] Launched synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1/runme.log
+show_objects -name mosi [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BMEM.*.* } ]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Wed Jan 21 10:37:49 2026] Launched synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 8
+[Wed Jan 21 10:38:59 2026] Launched impl_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.017 . Memory (MB): peak = 4909.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1320 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'vga_top' is not ideal for floorplanning, since the cellview 'ray_calculator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 4909.695 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.176 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.176 . Memory (MB): peak = 4909.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4909.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 100 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 20 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 80 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 4909.695 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 4909.695 ; gain = 0.000
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/pixel_clk}} 
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/vga_clk}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 300
+Starting simulation...
+Sending packet
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+run 300
+set_property CONFIG.USE_LOCKED {true} [get_ips clk_25MHz]
+generate_target all [get_files  D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_25MHz'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_25MHz'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_25MHz'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_25MHz'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_25MHz'...
+catch { config_ip_cache -export [get_ips -all clk_25MHz] }
+export_ip_user_files -of_objects [get_files D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci] -no_script -sync -force -quiet
+reset_run clk_25MHz_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/HDL_Environment/vivado_proj/my_spi_debug.runs/clk_25MHz_synth_1
+
+launch_runs clk_25MHz_synth_1 -jobs 8
+[Wed Jan 21 10:50:43 2026] Launched clk_25MHz_synth_1...
+Run output will be captured here: D:/HDL_Environment/vivado_proj/my_spi_debug.runs/clk_25MHz_synth_1/runme.log
+export_simulation -lib_map_path [list {modelsim=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/modelsim} {questa=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/questa} {riviera=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/riviera} {activehdl=D:/HDL_Environment/vivado_proj/my_spi_debug.cache/compile_simlib/activehdl}] -of_objects [get_files D:/HDL_Environment/vivado_proj/my_spi_debug.srcs/sources_1/ip/clk_25MHz/clk_25MHz.xci] -directory D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files/sim_scripts -ip_user_files_dir D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files -ipstatic_source_dir D:/HDL_Environment/vivado_proj/my_spi_debug.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+add_bp {D:/HDL_Environment/src/vga_top.v} 34
+remove_bps -file {D:/HDL_Environment/src/vga_top.v} -line 34
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+WARNING: Simulation object /tb_vga_top/uut/vga_clk was not found in the design.
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 4909.695 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+WARNING: Simulation object /tb_vga_top/uut/vga_clk was not found in the design.
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Sending packet
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4909.695 ; gain = 0.000
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/locked}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1700
+Starting simulation...
+Sending packet
+run 1700
+run 1700
+run 1700
+run 1700
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 5426.766 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+run 3000
+Sending packet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 5429.078 ; gain = 0.000
+run 3000
+Sending packet
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/spi_info/sck_rise}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 3000
+Starting simulation...
+Sending packet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+ERROR: [VRFC 10-4982] syntax error near 'else' [D:/HDL_Environment/src/spi_master.v:40]
+ERROR: [VRFC 10-8549] Verilog 2000 keyword 'else' used in incorrect context [D:/HDL_Environment/src/spi_master.v:40]
+ERROR: [VRFC 10-8530] module 'spi_master' is ignored due to previous errors [D:/HDL_Environment/src/spi_master.v:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 5551.910 ; gain = 0.000
+run 3000
+Sending packet
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/spi_info/sck_sync0}} 
+current_wave_config {tb_vga_top_behav.wcfg}
+tb_vga_top_behav.wcfg
+add_wave {{/tb_vga_top/uut/spi_info/sck_sync1}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 3000
+Starting simulation...
+Sending packet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\vga_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [d:\HDL_Environment\vivado_proj\my_spi_debug.gen\sources_1\ip\clk_25MHz\clk_25MHz_clk_wiz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\HDL_Environment\src\spi_master.v:]
+save_wave_config {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance tb_vga_top.uut.pxl_25Mhz_clk.inst.plle2_adv_inst are not same.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 5551.910 ; gain = 0.000
+run 3000
+Sending packet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_vga_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/XilinxSoftware/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XilinxSoftware/2025.1/Vivado/data/xsim/xsim.ini' copied to run dir:'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vga_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/vivado_proj/my_spi_debug.gen/sources_1/ip/clk_25MHz/clk_25MHz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/height_calculator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module height_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_calculator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/ray_feeder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ray_counter
+INFO: [VRFC 10-311] analyzing module ray_feeder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/update_player_pos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module update_player_pos
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-311] analyzing module vga_clk_25MHz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/world.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module world
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/HDL_Environment/src/tb_vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_vga_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/XilinxSoftware/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_top_behav xil_defaultlib.tb_vga_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.clk_25MHz_clk_wiz
+Compiling module xil_defaultlib.clk_25MHz
+Compiling module xil_defaultlib.vga_sync
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.ray_counter
+Compiling module xil_defaultlib.update_player_pos
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.ray_feeder
+Compiling module xil_defaultlib.world
+Compiling module xil_defaultlib.ray_calculator
+Compiling module xil_defaultlib.height_calculator
+Compiling module xil_defaultlib.vga_top
+Compiling module xil_defaultlib.tb_vga_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_vga_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/HDL_Environment/vivado_proj/my_spi_debug.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_top_behav -key {Behavioral:sim_1:Functional:tb_vga_top} -tclbatch {tb_vga_top.tcl} -view {D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/HDL_Environment/vivado_proj/tb_vga_top_behav.wcfg
+source tb_vga_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting simulation...
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance tb_vga_top.uut.pxl_25Mhz_clk.inst.plle2_adv_inst are not same.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 5551.910 ; gain = 0.000
+run 3000
+Sending packet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 11:58:27 2026...

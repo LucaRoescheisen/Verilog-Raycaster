@@ -55,9 +55,13 @@ module ray_calculator(
         
     end
 
-    reg [2:0] setup_timer;
+    reg [3:0] setup_timer;
     //Separate the fractional and integer parts of the player's position for readability
+    reg [9:0] ray_index_pipe;
 
+    always @(posedge clk) begin
+        ray_index_pipe <= ray_index;
+    end
 
 
     always @(posedge clk) begin
@@ -71,7 +75,7 @@ module ray_calculator(
             set_positional_values <= 0;
         end else begin
             if(write_new_frame)
-            setup_timer <= {setup_timer[1:0], 1'b0}; // Shift left every clock
+            setup_timer <= {setup_timer[2:0], 1'b0}; // Shift left every clock
         end
     end
 
@@ -93,12 +97,20 @@ module ray_calculator(
     wire signed [15:0] plane_y = scaled_planeY[15:0];
 
 
-    wire signed [15:0] cam_x = cam_x_lut[ray_index];
-    wire signed [31:0] part_x = (plane_x * cam_x) >>> 14;
-    wire signed [31:0] part_y = (plane_y * cam_x) >>> 14;
+    wire signed [15:0] cam_x = cam_x_lut[ray_index_pipe];
+    reg signed [31:0] part_x_reg, part_y_reg;
+    always @(posedge clk) begin
+        part_x_reg <= (plane_x * cam_x) >>> 14;
+        part_y_reg <= (plane_y * cam_x) >>> 14;
+    end
 
-    wire signed [15:0] rayDirX = dirX + part_x[15:0];
-    wire signed [15:0] rayDirY = dirY + part_y[15:0];
+    reg signed [15:0] rayDirX;
+    reg signed [15:0] rayDirY;
+    always @(posedge clk) begin
+        rayDirX <= dirX + $signed(part_x_reg[15:0]);
+        rayDirY <= dirY + $signed(part_y_reg[15:0]);
+    end
+
     wire [15:0] abs_full_x = rayDirX[15] ? (-rayDirX) : rayDirX;
     wire [15:0] abs_full_y = rayDirY[15] ? (-rayDirY) : rayDirY;
 
@@ -187,13 +199,20 @@ module ray_calculator(
 
 
     //Make raw_distance signed so you can multiply by the rayDir, then shift to 32 bits and add to a padded XPos
-    wire signed [40:0] x_part = ($signed({1'b0, raw_distance}) * $signed(rayDirX));
-    wire signed [40:0] y_part = ($signed({1'b0, raw_distance}) * $signed(rayDirY));
-    wire signed[31:0] wall_hit_x =  ($signed({12'b0, xPos, 8'b0})) + (x_part >>> 14);
-                                    
-    wire signed[31:0] wall_hit_y = ($signed({12'b0, yPos, 8'b0}))  + (y_part >>> 14);
-
- 
+    reg signed [40:0] x_part_reg, y_part_reg;
+    always @(posedge clk) begin
+        x_part_reg <= ($signed({1'b0, raw_distance}) * $signed(rayDirX));
+        y_part_reg <= ($signed({1'b0, raw_distance}) * $signed(rayDirY));
+    end
+   // wire signed[31:0] wall_hit_x =  ($signed({12'b0, xPos, 8'b0})) + (x_part >>> 14);                       
+   // wire signed[31:0] wall_hit_y = ($signed({12'b0, yPos, 8'b0}))  + (y_part >>> 14);
+    reg signed [31:0] wall_hit_x_reg, wall_hit_y_reg;
+    reg [23:0] distance_final_reg;
+    always @(posedge clk) begin
+        distance_final_reg <= raw_distance;
+        wall_hit_x_reg <= ($signed({12'b0, xPos, 8'b0})) + (x_part_reg >>> 14);
+        wall_hit_y_reg <= ($signed({12'b0, yPos, 8'b0})) + (y_part_reg >>> 14);
+    end
     always @(posedge clk) begin
         if(reset) begin
             ray_done <= 0;
@@ -201,22 +220,22 @@ module ray_calculator(
 
         if(is_wall && ray_done != 1 && setup_complete) begin
             if(prev_side == 0) begin    //Vertical wall
-                distance_x <= raw_distance[19:8]; // Since we are Q8.16 we take 4 lowest bits (corresponds to 0- 16), then the 8 highest fractional bits (corresponding to 0- 256)
+                distance_x <= distance_final_reg[19:8]; // Since we are Q8.16 we take 4 lowest bits (corresponds to 0- 16), then the 8 highest fractional bits (corresponding to 0- 256)
                 distance_y <= 0;
                  if (step_x == 1)
-                    tex_coord <= 4'd15 - wall_hit_y[15:12];
+                    tex_coord <= 4'd15 - wall_hit_y_reg[15:12];
                 else
-                    tex_coord <= wall_hit_y[15:12];
+                    tex_coord <= wall_hit_y_reg[15:12];
 
                 lighting_factor <= 2'b01;  // Left and right faces are both the same colour (medium colour)
             end
                 else begin  //Horizontal wall
-                    distance_y <= raw_distance[19:8]; 
+                    distance_y <= distance_final_reg[19:8]; 
                     // FORCE FLIP EVERYTHING
                     if (step_y == -1)
-                        tex_coord <= 4'd15 - wall_hit_x[15:12];
+                        tex_coord <= 4'd15 - wall_hit_x_reg[15:12];
                     else
-                        tex_coord <= wall_hit_x[15:12];
+                        tex_coord <= wall_hit_x_reg[15:12];
                         
                     distance_x <= 0;
                     lighting_factor <= (step_y == 1) ? 2'b00 : 2'b10;  // If hits top remain same colour, if its bottom then darken through bit shifting

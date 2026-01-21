@@ -23,7 +23,7 @@ module update_player_pos(
     wire signed [15:0] dir_x = full_trig_row[31:16]; //Instantly update given the case statement
     wire signed [15:0] dir_y = full_trig_row[15:0];
 
-
+   
     reg spi_sync_0, spi_sync_1;
     wire spi_tick;
     always @(posedge clk) begin
@@ -37,6 +37,7 @@ module update_player_pos(
         if(reset) begin
             x_pos <= 12'b001000000000;
             y_pos <= 12'b001000000000;
+     
         end
 
         full_trig_row <= trig_lut[player_angle];
@@ -45,12 +46,12 @@ module update_player_pos(
 
             case(spi_data)
                 FORWARD : begin
-                    x_pos <= x_pos  + $signed((dir_x * $signed(SPEED)) >>> 14); 
-                    y_pos <= y_pos  + $signed((dir_y * $signed(SPEED)) >>> 14);
+                    x_pos <= x_pos + $signed((dir_x * $signed(SPEED)) >>> 14); 
+                    y_pos <= y_pos + $signed((dir_y * $signed(SPEED)) >>> 14);
                 end
                 BACKWARD : begin
-                    x_pos <= x_pos  - ((dir_x * SPEED) >>> 14);
-                    y_pos <= y_pos  - ((dir_y * SPEED) >>> 14);
+                    x_pos <= x_pos - $signed((dir_x * $signed(SPEED)) >>> 14);
+                    y_pos <= y_pos - $signed((dir_y * $signed(SPEED)) >>> 14);
                 end
                 default : begin
                         x_pos <= x_pos;
