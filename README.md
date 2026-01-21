@@ -10,7 +10,7 @@ Tools: Vivado ML Edition, Micro Python
 This was my transition project into HDLs. My goal was to learn about hardware implementations of 3D rendering and implement a complex system to understand 
 how FPGAs function, deepen my knowledge on resource management, timing closure and RTL design patterns
 
- **##1. Project Overview**
+ **1. Project Overview**
    This project is a real-time 3D rendering engine based on the DDA algorithm (similar to Wolfenstein 3D). It calculates the intersection of rays with grid lines
    in hardware to generate a pseudo-3D perspective on a VGA display.
    Key Features
