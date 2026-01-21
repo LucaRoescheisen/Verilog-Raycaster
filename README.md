@@ -1,6 +1,9 @@
 FPGA Ray_Casting Engine
+
 Target Hardware: Arty S7, Raspberry Pi Pico
+
 Language: Verilog, Python
+
 Tools: Vivado ML Edition, Micro Python
 
 NOTE:
