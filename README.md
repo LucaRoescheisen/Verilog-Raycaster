@@ -6,7 +6,7 @@
 
 ---
 
-> **Note on Project Origin:** > This was my transition project into Hardware Description Languages (HDLs). My goal was to move beyond basic logic and implement a mathematically complex system (3D Ray-Casting) to understand how FPGAs function, deepening my knowledge of resource management, timing closure, and RTL design patterns.
+> **Note on Project Origin:** This was my transition project into Hardware Description Languages (HDLs). My goal was to move beyond basic logic and implement a mathematically complex system (3D Ray-Casting) to understand how FPGAs function, deepening my knowledge of resource management, timing closure, and RTL design patterns.
 
 ---
 
